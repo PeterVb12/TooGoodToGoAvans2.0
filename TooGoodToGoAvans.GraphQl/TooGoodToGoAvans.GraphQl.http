@@ -1,0 +1,6 @@
+@TooGoodToGoAvans.GraphQl_HostAddress = http://localhost:5263
+
+GET {{TooGoodToGoAvans.GraphQl_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

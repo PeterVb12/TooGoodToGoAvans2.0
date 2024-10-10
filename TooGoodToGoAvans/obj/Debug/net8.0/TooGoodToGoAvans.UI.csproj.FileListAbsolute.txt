@@ -150,3 +150,4 @@ C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGood
 C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans\obj\Debug\net8.0\TooGoodToGoAvans.UI.pdb
 C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans\obj\Debug\net8.0\TooGoodToGoAvans.UI.genruntimeconfig.cache
 C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans\obj\Debug\net8.0\ref\TooGoodToGoAvans.UI.dll
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans\obj\Debug\net8.0\TooGoodToGoAvans.UI.sourcelink.json

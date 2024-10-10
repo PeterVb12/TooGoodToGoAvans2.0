@@ -1,0 +1,6 @@
+@TooGoodToGoAvans.WebApi_HostAddress = http://localhost:5212
+
+GET {{TooGoodToGoAvans.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

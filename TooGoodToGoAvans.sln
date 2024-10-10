@@ -7,12 +7,26 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.UI", "TooG
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.Domain", "TooGoodToGoAvans.Domain\TooGoodToGoAvans.Domain.csproj", "{1E90B40D-B93F-4E16-A025-4B84EA4C7A64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TooGoodToGoAvans.Infrastructure", "TooGoodToGoAvans.Infrastructure\TooGoodToGoAvans.Infrastructure.csproj", "{AD52F180-8E1D-4032-B0DF-B8C15295FFA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.Infrastructure", "TooGoodToGoAvans.Infrastructure\TooGoodToGoAvans.Infrastructure.csproj", "{AD52F180-8E1D-4032-B0DF-B8C15295FFA0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1E90B40D-B93F-4E16-A025-4B84EA4C7A64} = {1E90B40D-B93F-4E16-A025-4B84EA4C7A64}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TooGoodToGoAvans.DomainService", "TooGoodToGoAvans.DomainService\TooGoodToGoAvans.DomainService.csproj", "{78ED926E-85A2-40B4-8004-B98F773BF064}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.DomainService", "TooGoodToGoAvans.DomainService\TooGoodToGoAvans.DomainService.csproj", "{78ED926E-85A2-40B4-8004-B98F773BF064}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{4BB5D7E4-CF44-46A2-BFFD-7A94DE39F38C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A9A5C4EB-4170-4213-A3B7-6558C7F36522}"
+	ProjectSection(SolutionItems) = preProject
+		build.yml = build.yml
+		deploy.yml = deploy.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TooGoodToGoAvans.WebApi", "TooGoodToGoAvans.WebApi\TooGoodToGoAvans.WebApi.csproj", "{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TooGoodToGoAvans.GraphQl", "TooGoodToGoAvans.GraphQl\TooGoodToGoAvans.GraphQl.csproj", "{4B372658-6E6A-46B7-B6D0-773237107BAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TooGoodToGoAvans.UI.Test", "TooGoodToGoAvans.UI.Test\TooGoodToGoAvans.UI.Test.csproj", "{916EA45A-B5FB-418F-AE45-8AC167A46B8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,9 +50,24 @@ Global
 		{78ED926E-85A2-40B4-8004-B98F773BF064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78ED926E-85A2-40B4-8004-B98F773BF064}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78ED926E-85A2-40B4-8004-B98F773BF064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B372658-6E6A-46B7-B6D0-773237107BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B372658-6E6A-46B7-B6D0-773237107BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B372658-6E6A-46B7-B6D0-773237107BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B372658-6E6A-46B7-B6D0-773237107BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916EA45A-B5FB-418F-AE45-8AC167A46B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916EA45A-B5FB-418F-AE45-8AC167A46B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916EA45A-B5FB-418F-AE45-8AC167A46B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916EA45A-B5FB-418F-AE45-8AC167A46B8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A9A5C4EB-4170-4213-A3B7-6558C7F36522} = {4BB5D7E4-CF44-46A2-BFFD-7A94DE39F38C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF288600-5011-4FEA-B213-C0637845B2B9}
