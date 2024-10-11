@@ -133,3 +133,14 @@ C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGood
 C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\obj\Debug\net8.0\TooGoodToGoAvans.Infrastructure.pdb
 C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\obj\Debug\net8.0\TooGoodToGoAvans.Infrastructure.genruntimeconfig.cache
 C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\obj\Debug\net8.0\ref\TooGoodToGoAvans.Infrastructure.dll
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\TooGoodToGoAvans.DomainService.deps.json
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\TooGoodToGoAvans.DomainService.runtimeconfig.json
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\TooGoodToGoAvans.DomainService.exe
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\TooGoodToGoAvans.DomainService.dll
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\TooGoodToGoAvans.DomainService.pdb
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\obj\Debug\net8.0\TooGoodToGoAvans.Infrastructure.sourcelink.json
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\AVANS\AVANS_jaar2\Periode_1\SSWP_Project_TooGoodToGo\TooGoodToGoAvans\TooGoodToGoAvans.Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

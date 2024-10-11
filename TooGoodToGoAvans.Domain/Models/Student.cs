@@ -17,5 +17,16 @@ namespace TooGoodToGoAvans.Domain.Models
         public string EmailAddress { get; set; }
         public City StudentCity { get; set; }
         public string Phonenumber { get; set; }
+
+        public Student(Guid id, string name, DateTime birthdate, string studentId, string emailAddress, City studentCity, string phonenumber)
+        {
+            Id = id;
+            Name = name;
+            Birthdate = birthdate;
+            StudentId = studentId;
+            EmailAddress = emailAddress;
+            StudentCity = studentCity;
+            Phonenumber = phonenumber;
+        }
     }
 }

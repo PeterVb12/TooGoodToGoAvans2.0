@@ -12,5 +12,13 @@ namespace TooGoodToGoAvans.Domain.Models
         public City City { get; set; }
         public string CanteenLocation { get; set; }
         public bool OffersWarmMeals { get; set; }
+
+        public Canteen(Guid id, City city, string canteenLocation, bool offersWarmMeals)
+        {
+            Id = id;
+            City = city;
+            CanteenLocation = canteenLocation;
+            OffersWarmMeals = offersWarmMeals;
+        }
     }
 }
