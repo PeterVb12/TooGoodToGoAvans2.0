@@ -4267,6 +4267,7 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
+      "TooGoodToGoAvans.Domain >= 1.0.0",
       "TooGoodToGoAvans.Infrastructure >= 1.0.0"
     ]
   },
@@ -4298,6 +4299,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\TooGoodToGoAvans.Domain.csproj": {
+              "projectPath": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\TooGoodToGoAvans.Domain.csproj"
+            },
             "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\TooGoodToGoAvans.Infrastructure.csproj": {
               "projectPath": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\TooGoodToGoAvans.Infrastructure.csproj"
             }

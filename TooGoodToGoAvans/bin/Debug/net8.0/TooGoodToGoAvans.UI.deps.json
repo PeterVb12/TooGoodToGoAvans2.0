@@ -11,6 +11,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.10",
+          "TooGoodToGoAvans.Domain": "1.0.0",
           "TooGoodToGoAvans.Infrastructure": "1.0.0"
         },
         "runtime": {

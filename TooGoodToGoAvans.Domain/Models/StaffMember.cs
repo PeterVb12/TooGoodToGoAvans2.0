@@ -14,6 +14,8 @@ namespace TooGoodToGoAvans.Domain.Models
 
         public Canteen WorkLocation { get; set; }
 
+        public StaffMember() { }
+
         public StaffMember(Guid staffMemberId, string name, int employeeNumber, Canteen workLocation)
         {
             StaffMemberId = staffMemberId;

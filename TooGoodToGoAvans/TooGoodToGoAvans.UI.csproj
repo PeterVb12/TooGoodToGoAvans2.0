@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TooGoodToGoAvans.Domain\TooGoodToGoAvans.Domain.csproj" />
     <ProjectReference Include="..\TooGoodToGoAvans.Infrastructure\TooGoodToGoAvans.Infrastructure.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TooGoodToGoAvans.Domain.Models.Package>
+
+@{
+    ViewData["Title"] = "Available Packages";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Available Packages</h2>
+    <div class="row">
+        @foreach (var package in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@package.Name</h5>
+                        <p class="card-text">
+                            <strong>Price:</strong> €@package.Price<br />
+                            <strong>Pickup Time:</strong> @package.DateAndTimePickup.ToString("g")<br />
+                            <strong>Last Pickup Time:</strong> @package.DateAndTimeLastPickup.ToString("g")<br />
+                            <strong>Age Restricted:</strong> @(package.AgeRestricted ? "Yes" : "No")<br />
+                            <strong>Meal Type:</strong> @package.MealType<br />
+                            <strong>Canteen:</strong> @(package.CanteenServedAt != null ? package.CanteenServedAt.CanteenLocation : "N/A")
+                        </p>
+                        @if (package.Products != null && package.Products.Any())
+                        {
+                            <p><strong>Products:</strong></p>
+                            <ul>
+                                @foreach (var product in package.Products)
+                                {
+                                    <li>@product.Name</li>
+                                }
+                            </ul>
+                        }
+                        else
+                        {
+                            <p>No products available</p>
+                        }
+                    </div>
+                    <div class="card-footer">
+                        @if (package.ReservedBy != null)
+                        {
+                            <small class="text-muted">Reserved by @package.ReservedBy.Name</small>
+                        }
+                        else
+                        {
+                            <small class="text-muted">Not reserved yet</small>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

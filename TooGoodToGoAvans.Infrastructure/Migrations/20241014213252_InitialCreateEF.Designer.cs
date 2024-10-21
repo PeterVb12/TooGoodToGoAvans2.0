@@ -12,8 +12,8 @@ using TooGoodToGoAvans.Infrastructure;
 namespace TooGoodToGoAvans.Infrastructure.Migrations
 {
     [DbContext(typeof(TooGoodToGoAvansDBContext))]
-    [Migration("20241009111321_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241014213252_InitialCreateEF")]
+    partial class InitialCreateEF
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

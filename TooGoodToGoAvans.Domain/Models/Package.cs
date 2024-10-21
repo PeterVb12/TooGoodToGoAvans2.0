@@ -20,6 +20,8 @@ namespace TooGoodToGoAvans.Domain.Models
         public Student? ReservedBy { get; set; } 
         public ICollection<Product>? Products { get; set; }
 
+        public Package() { }
+
         public Package(Guid packageId, string name, DateTime dateAndTimePickup, DateTime dateAndTimeLastPickup, bool ageRestricted, double price, string mealType, Canteen? canteenServedAt, Student? reservedBy, ICollection<Product>? products)
         {
             PackageId = packageId;
