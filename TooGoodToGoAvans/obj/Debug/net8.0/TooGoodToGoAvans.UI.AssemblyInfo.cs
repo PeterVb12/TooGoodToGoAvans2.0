@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TooGoodToGoAvans.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7367fe4f03e8669ed5668fef41046b57409c0f6f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c23db011f2eef4bc989fd78e84f1f7a0995f9e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("TooGoodToGoAvans.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TooGoodToGoAvans.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
