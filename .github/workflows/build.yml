@@ -41,7 +41,7 @@ jobs:
       run: dotnet publish ./TooGoodToGoAvans.WebApi --output ./publish/api --configuration Release
 
     - name: Publish Web App
-      run: dotnet publish ./TooGoodToGoAvans.UI --output ./publish/webapp --configuration Release
+      run: dotnet publish ./TooGoodToGoAvans --output ./publish/webapp --configuration Release
 
     # Bundle EF migrations (Main Application)
     - name: Bundle EF project (Main App)
