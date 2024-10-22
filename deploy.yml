@@ -2,13 +2,14 @@ name: deploy
 
 on:
   push:
-    branches: main
+    branches:
+      - main
 
   workflow_dispatch:
 
 jobs:
   build:
-    uses: ./.github/workflows/build.yml
+    uses: ./.github/workflows/build.yml  
     secrets: inherit
 
   deploy:
@@ -68,7 +69,18 @@ jobs:
         package: ./webapp
 
     # Set up environment variables for Main and Identity Databases
-    - uses: azure/appservice-settings@v1
+    - name: Set environment variables
+      uses: azure/appservice-settings@v1
       with:
         app-name: '${{ secrets.AZURE_WEBAPP_APP_SERVICE_NAME }}'
-        app-settings-json: '[{ "name": "ConnectionStringAzureSQL", "value": "Server=tcp:${{ secrets.AZURE_SQL_SERVER_NAME }}.database.windows.net,1433;Database=${{ secrets.AZURE_SQL_DATABASE_NAME }};User ID=app_user;Password=${{ secrets.AZURE_SQL_APP_USER_PASSWORD }};Trusted_Connection=False;Encrypt=True;"}, { "name": "ConnectionStringIdentitySQL", "value": "Server=tcp:${{ secrets.AZURE_SQL_SERVER_NAME_IDENTITY }}.database.windows.net,1433;Database=${{ secrets.AZURE_SQL_DATABASE_NAME_IDENTITY }};User ID=identity_user;Password=${{ secrets.AZURE_SQL_IDENTITY_USER_PASSWORD }};Trusted_Connection=False;Encrypt=True;"}]'
+        app-settings-json: |
+          [
+            {
+              "name": "ConnectionStringAzureSQL",
+              "value": "Server=tcp:${{ secrets.AZURE_SQL_SERVER_NAME }}.database.windows.net,1433;Database=${{ secrets.AZURE_SQL_DATABASE_NAME }};User ID=app_user;Password=${{ secrets.AZURE_SQL_APP_USER_PASSWORD }};Trusted_Connection=False;Encrypt=True;"
+            },
+            {
+              "name": "ConnectionStringIdentitySQL",
+              "value": "Server=tcp:${{ secrets.AZURE_SQL_SERVER_NAME_IDENTITY }}.database.windows.net,1433;Database=${{ secrets.AZURE_SQL_DATABASE_NAME_IDENTITY }};User ID=identity_user;Password=${{ secrets.AZURE_SQL_IDENTITY_USER_PASSWORD }};Trusted_Connection=False;Encrypt=True;"
+            }
+          ]
