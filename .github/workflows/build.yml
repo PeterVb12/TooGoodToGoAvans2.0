@@ -53,6 +53,7 @@ jobs:
     # Bundle EF migrations (Identity Framework)
     - name: Bundle EF project (Identity Framework)
       run:  |
+        dotnet tool restore
         dotnet ef migrations bundle --output ./publish/migrations/identity_migrations.exe --startup-project ./TooGoodToGoAvans.WebApi --project ./TooGoodToGoAvans.Infrastructure --self-contained -r linux-x64
 
     # Upload artifacts
