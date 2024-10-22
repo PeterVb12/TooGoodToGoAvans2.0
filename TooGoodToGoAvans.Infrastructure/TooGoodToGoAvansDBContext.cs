@@ -11,6 +11,7 @@ namespace TooGoodToGoAvans.Infrastructure
 {
     public class TooGoodToGoAvansDBContext : DbContext
     {
+        public TooGoodToGoAvansDBContext() { }
 
         public TooGoodToGoAvansDBContext(DbContextOptions<TooGoodToGoAvansDBContext> options) : base(options)
         {

@@ -11,10 +11,30 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 
-var connectionString = builder.Configuration.GetConnectionString("LocalConnection");
-builder.Services.AddDbContext<TooGoodToGoAvansDBContext>(options => options.UseSqlServer(connectionString));
-var authConnectionString = builder.Configuration.GetConnectionString("LocalAuthConnection");
-builder.Services.AddDbContext<TooGoodToGoAvansDBContext_IF>(options => options.UseSqlServer(authConnectionString));
+
+string? connectionString;
+string? authConnectionString;
+
+// Controleer of het een development-omgeving is
+if (builder.Environment.IsDevelopment())
+{
+    // Gebruik lokale connecties
+    connectionString = builder.Configuration.GetConnectionString("LocalConnection");
+    authConnectionString = builder.Configuration.GetConnectionString("LocalAuthConnection");
+}
+else
+{
+    // Gebruik Azure connecties voor productie
+    connectionString = builder.Configuration.GetConnectionString("AzureConnection");
+    authConnectionString = builder.Configuration.GetConnectionString("AzureAuthConnection");
+}
+
+// Configureer de DbContexts
+builder.Services.AddDbContext<TooGoodToGoAvansDBContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddDbContext<TooGoodToGoAvansDBContext_IF>(options =>
+    options.UseSqlServer(authConnectionString));
 
 // IF gedeelte
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
