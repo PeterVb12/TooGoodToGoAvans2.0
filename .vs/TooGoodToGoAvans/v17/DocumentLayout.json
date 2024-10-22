@@ -98,37 +98,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Canteen.cs",
-              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
-              "RelativeDocumentMoniker": "TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
-              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
-              "RelativeToolTip": "TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:10:30.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PackageReserving.cshtml",
-              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
-              "RelativeDocumentMoniker": "TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
-              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
-              "RelativeToolTip": "TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAACKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-17T19:06:03.621Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -140,8 +114,7 @@
               "RelativeToolTip": "TooGoodToGoAvans\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T17:50:09.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T17:50:09.435Z"
             },
             {
               "$type": "Document",
@@ -153,8 +126,7 @@
               "RelativeToolTip": "TooGoodToGoAvans\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T14:04:34.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T14:04:34.553Z"
             },
             {
               "$type": "Document",
@@ -166,86 +138,7 @@
               "RelativeToolTip": "TooGoodToGoAvans\\Models\\LoginViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T14:02:49.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "TooGoodToGoAvans\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "TooGoodToGoAvans\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T13:57:11.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "TooGoodToGoAvans\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "TooGoodToGoAvans\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T13:55:53.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StudentRepository.cs",
-              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
-              "RelativeDocumentMoniker": "TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
-              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
-              "RelativeToolTip": "TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T13:42:31.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IStudentRepository.cs",
-              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.DomainService\\IStudentRepository.cs",
-              "RelativeDocumentMoniker": "TooGoodToGoAvans.DomainService\\IStudentRepository.cs",
-              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.DomainService\\IStudentRepository.cs",
-              "RelativeToolTip": "TooGoodToGoAvans.DomainService\\IStudentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T13:42:27.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\UserRole.cs",
-              "RelativeDocumentMoniker": "TooGoodToGoAvans.Domain\\Models\\UserRole.cs",
-              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\UserRole.cs",
-              "RelativeToolTip": "TooGoodToGoAvans.Domain\\Models\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T12:06:03.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Models\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "TooGoodToGoAvans\\Models\\RegisterViewModel.cs",
-              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Models\\RegisterViewModel.cs",
-              "RelativeToolTip": "TooGoodToGoAvans\\Models\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wAMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T11:55:50.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T14:02:49.253Z"
             },
             {
               "$type": "Document",
@@ -262,6 +155,102 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PackageReserving.cshtml",
+              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
+              "RelativeDocumentMoniker": "TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
+              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
+              "RelativeToolTip": "TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAACKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-17T19:06:03.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Canteen.cs",
+              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
+              "RelativeDocumentMoniker": "TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
+              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
+              "RelativeToolTip": "TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T19:10:30.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "TooGoodToGoAvans\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "TooGoodToGoAvans\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T13:57:11.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "TooGoodToGoAvans\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "TooGoodToGoAvans\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T13:55:53.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
+              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
+              "RelativeToolTip": "TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T13:42:31.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IStudentRepository.cs",
+              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.DomainService\\IStudentRepository.cs",
+              "RelativeDocumentMoniker": "TooGoodToGoAvans.DomainService\\IStudentRepository.cs",
+              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.DomainService\\IStudentRepository.cs",
+              "RelativeToolTip": "TooGoodToGoAvans.DomainService\\IStudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T13:42:27.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\UserRole.cs",
+              "RelativeDocumentMoniker": "TooGoodToGoAvans.Domain\\Models\\UserRole.cs",
+              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\UserRole.cs",
+              "RelativeToolTip": "TooGoodToGoAvans.Domain\\Models\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T12:06:03.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Models\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "TooGoodToGoAvans\\Models\\RegisterViewModel.cs",
+              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Models\\RegisterViewModel.cs",
+              "RelativeToolTip": "TooGoodToGoAvans\\Models\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wAMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T11:55:50.961Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 21,
               "Title": "20241014213715_InitialCreateIF.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\Migrations\\TooGoodToGoAvansDBContext_IFMigrations\\20241014213715_InitialCreateIF.cs",
@@ -270,8 +259,7 @@
               "RelativeToolTip": "TooGoodToGoAvans.Infrastructure\\Migrations\\TooGoodToGoAvansDBContext_IFMigrations\\20241014213715_InitialCreateIF.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T21:37:15.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T21:37:15.833Z"
             },
             {
               "$type": "Document",
@@ -283,8 +271,7 @@
               "RelativeToolTip": "TooGoodToGoAvans.Domain\\Models\\StaffMember.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T21:32:24.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T21:32:24.15Z"
             },
             {
               "$type": "Document",
@@ -296,8 +283,7 @@
               "RelativeToolTip": "TooGoodToGoAvans.Domain\\Models\\Student.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T19:41:36.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T19:41:36.028Z"
             },
             {
               "$type": "Document",
@@ -309,8 +295,7 @@
               "RelativeToolTip": "TooGoodToGoAvans.Domain\\Models\\Product.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAxwBUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T19:41:33.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T19:41:33.975Z"
             },
             {
               "$type": "Document",
@@ -322,8 +307,7 @@
               "RelativeToolTip": "TooGoodToGoAvans.Domain\\Models\\Package.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAA3wCUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T19:41:26.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T19:41:26.443Z"
             },
             {
               "$type": "Document",
@@ -335,8 +319,7 @@
               "RelativeToolTip": "TooGoodToGoAvans\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-14T15:15:09.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T15:15:09.781Z"
             },
             {
               "$type": "Document",
@@ -348,8 +331,7 @@
               "RelativeToolTip": "TooGoodToGoAvans\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-14T14:25:08.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T14:25:08.741Z"
             },
             {
               "$type": "Document",
@@ -361,8 +343,7 @@
               "RelativeToolTip": "TooGoodToGoAvans.Infrastructure\\TooGoodToGoAvansDBContext_IF.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T14:39:58.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T14:39:58.245Z"
             },
             {
               "$type": "Document",
@@ -374,8 +355,7 @@
               "RelativeToolTip": "TooGoodToGoAvans\\Program.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAAAC4AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T14:25:09.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T14:25:09.289Z"
             },
             {
               "$type": "Document",
@@ -387,8 +367,7 @@
               "RelativeToolTip": "TooGoodToGoAvans.Infrastructure\\TooGoodToGoAvansDBContext.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAxwBUAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T10:18:37.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-09T10:18:37.351Z"
             }
           ]
         }
