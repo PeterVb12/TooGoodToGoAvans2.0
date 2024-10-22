@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TooGoodToGoAvans.DomainService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd28f3f55202af67c8bddb49c14bcf27497c6ac4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f336e68dc12f23dc2e378f01dc7386f15e9586b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TooGoodToGoAvans.DomainService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TooGoodToGoAvans.DomainService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

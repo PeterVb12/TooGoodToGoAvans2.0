@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.UI", "TooGoodToGoAvans\TooGoodToGoAvans.UI.csproj", "{FB75DE66-D626-47D0-9289-6C486249E85B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.Domain", "TooGoodToGoAvans.Domain\TooGoodToGoAvans.Domain.csproj", "{1E90B40D-B93F-4E16-A025-4B84EA4C7A64}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.Infrastructure", "TooGoodToGoAvans.Infrastructure\TooGoodToGoAvans.Infrastructure.csproj", "{AD52F180-8E1D-4032-B0DF-B8C15295FFA0}"
@@ -20,16 +18,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.GraphQl", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.UI.Test", "TooGoodToGoAvans.UI.Test\TooGoodToGoAvans.UI.Test.csproj", "{916EA45A-B5FB-418F-AE45-8AC167A46B8E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TooGoodToGoAvans.UI", "TooGoodToGoAvans.UI\TooGoodToGoAvans.UI.csproj", "{2892B83B-687C-4250-B61E-D70A2D1F1A8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB75DE66-D626-47D0-9289-6C486249E85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB75DE66-D626-47D0-9289-6C486249E85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB75DE66-D626-47D0-9289-6C486249E85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB75DE66-D626-47D0-9289-6C486249E85B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E90B40D-B93F-4E16-A025-4B84EA4C7A64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E90B40D-B93F-4E16-A025-4B84EA4C7A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E90B40D-B93F-4E16-A025-4B84EA4C7A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,6 +50,10 @@ Global
 		{916EA45A-B5FB-418F-AE45-8AC167A46B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{916EA45A-B5FB-418F-AE45-8AC167A46B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{916EA45A-B5FB-418F-AE45-8AC167A46B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2892B83B-687C-4250-B61E-D70A2D1F1A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2892B83B-687C-4250-B61E-D70A2D1F1A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2892B83B-687C-4250-B61E-D70A2D1F1A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2892B83B-687C-4250-B61E-D70A2D1F1A8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

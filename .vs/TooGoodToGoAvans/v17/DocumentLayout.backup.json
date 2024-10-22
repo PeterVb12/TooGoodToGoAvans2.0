@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB75DE66-D626-47D0-9289-6C486249E85B}|TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans\\toogoodtogoavans.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FB75DE66-D626-47D0-9289-6C486249E85B}|TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj|solutionrelative:toogoodtogoavans\\toogoodtogoavans.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E90B40D-B93F-4E16-A025-4B84EA4C7A64}|TooGoodToGoAvans.Domain\\TooGoodToGoAvans.Domain.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans.domain\\models\\canteen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +31,16 @@
       "RelativeMoniker": "D:0:0:{AD52F180-8E1D-4032-B0DF-B8C15295FFA0}|TooGoodToGoAvans.Infrastructure\\TooGoodToGoAvans.Infrastructure.csproj|solutionrelative:toogoodtogoavans.infrastructure\\toogoodtogoavansdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB75DE66-D626-47D0-9289-6C486249E85B}|TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans\\views\\package\\packagereserving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB75DE66-D626-47D0-9289-6C486249E85B}|TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj|solutionrelative:toogoodtogoavans\\views\\package\\packagereserving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB75DE66-D626-47D0-9289-6C486249E85B}|TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB75DE66-D626-47D0-9289-6C486249E85B}|TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj|solutionrelative:toogoodtogoavans\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TooGoodToGoAvans\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB75DE66-D626-47D0-9289-6C486249E85B}|TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FB75DE66-D626-47D0-9289-6C486249E85B}|TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj|solutionrelative:toogoodtogoavans\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TooGoodToGoAvans\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -64,10 +64,8 @@
               "RelativeDocumentMoniker": "TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj",
               "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj",
               "RelativeToolTip": "TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-22T11:55:30.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T11:55:30.84Z"
             },
             {
               "$type": "Document",
