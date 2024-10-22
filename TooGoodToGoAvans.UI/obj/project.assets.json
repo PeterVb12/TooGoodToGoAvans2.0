@@ -4278,11 +4278,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj",
+      "projectUniqueName": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\TooGoodToGoAvans.UI.csproj",
       "projectName": "TooGoodToGoAvans.UI",
-      "projectPath": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\TooGoodToGoAvans.UI.csproj",
+      "projectPath": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\TooGoodToGoAvans.UI.csproj",
       "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-      "outputPath": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\obj\\",
+      "outputPath": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
