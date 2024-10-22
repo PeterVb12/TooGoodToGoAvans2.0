@@ -48,14 +48,14 @@ jobs:
       run:  |
         dotnet tool install --global dotnet-ef
         dotnet tool restore
-        dotnet ef migrations bundle --output ./publish/migrations/main_migrations.exe --startup-project ./TooGoodToGoAvans.WebApi --project ./TooGoodToGoAvans.Infrastructure --self-contained -r linux-x64
+        dotnet ef migrations bundle --output ./publish/migrations/main_migrations.exe --startup-project ./TooGoodToGoAvans.WebApi --project ./TooGoodToGoAvans.Infrastructure --self-contained -r linux-x64 --context TooGoodToGoAvansDBContext
     
     # Bundle EF migrations (Identity Framework)
     - name: Bundle EF project (Identity Framework)
       run:  |
         dotnet tool restore
-        dotnet ef migrations bundle --output ./publish/migrations/identity_migrations.exe --startup-project ./TooGoodToGoAvans.WebApi --project ./TooGoodToGoAvans.Infrastructure --self-contained -r linux-x64
-
+        dotnet ef migrations bundle --output ./publish/migrations/identity_migrations.exe --startup-project ./TooGoodToGoAvans.WebApi --project ./TooGoodToGoAvans.Infrastructure --self-contained -r linux-x64 --context TooGoodToGoAvansDBContext_IF
+    
 
     # Upload artifacts
     - name: Upload artifact API
