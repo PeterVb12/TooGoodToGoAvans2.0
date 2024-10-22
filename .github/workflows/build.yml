@@ -41,20 +41,18 @@ jobs:
       run: dotnet publish ./TooGoodToGoAvans.WebApi --output ./publish/api --configuration Release
 
     - name: Publish Web App
-      run: dotnet publish ./TooGoodToGoAvans --output ./publish/webapp --configuration Release
+      run: dotnet publish ./TooGoodToGoAvans.UI --output ./publish/webapp --configuration Release
 
     # Bundle EF migrations (Main Application)
     - name: Bundle EF project (Main App)
       run:  |
         dotnet tool install --global dotnet-ef
-        dotnet add ./TooGoodToGoAvans.Infrastructure package Microsoft.EntityFrameworkCore.Design --version 8.0.0
         dotnet tool restore
         dotnet ef migrations bundle --output ./publish/migrations/main_migrations.exe --startup-project ./TooGoodToGoAvans.WebApi --project ./TooGoodToGoAvans.Infrastructure --self-contained -r linux-x64
     
     # Bundle EF migrations (Identity Framework)
     - name: Bundle EF project (Identity Framework)
       run:  |
-        dotnet add ./TooGoodToGoAvans.Infrastructure package Microsoft.EntityFrameworkCore.Design --version 8.0.0
         dotnet tool restore
         dotnet ef migrations bundle --output ./publish/migrations/identity_migrations.exe --startup-project ./TooGoodToGoAvans.WebApi --project ./TooGoodToGoAvans.Infrastructure --self-contained -r linux-x64
 
