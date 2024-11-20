@@ -10,7 +10,7 @@ namespace TooGoodToGoAvans.Infrastructure
 {
     public class StaffMemberRepository : IStaffMemberRepository
     {
-        public Task<StaffMember> AddStaffMemberAsync(StaffMember staffMember)
+        public Task<StaffMember> AddAsync(StaffMember staffMember)
         {
             throw new NotImplementedException();
         }

@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using TooGoodToGoAvans.Domain.Models;
 using TooGoodToGoAvans.DomainService;
+using TooGoodToGoAvans.Infrastructure;
 using TooGoodToGoAvans.UI.Models;
-
 
 namespace TooGoodToGoAvans.UI.Controllers
 {
@@ -14,24 +14,40 @@ namespace TooGoodToGoAvans.UI.Controllers
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly IStudentRepository StudentRepository;
+        private readonly IStudentRepository studentRepository;
+        private readonly IStaffMemberRepository staffMemberRepository;
+        private readonly ICanteenRepository canteenRepository;
 
         public AccountController(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             RoleManager<IdentityRole> roleManager,
-            IStudentRepository StudentRepository)
+            IStudentRepository studentRepository,
+            IStaffMemberRepository staffMemberRepository,
+            ICanteenRepository canteenRepository)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.roleManager = roleManager;
-            this.StudentRepository = StudentRepository;
+            this.studentRepository = studentRepository;
+            this.staffMemberRepository = staffMemberRepository;
+            this.canteenRepository = canteenRepository;
         }
 
         [AllowAnonymous]
-        public IActionResult Register()
+        public async Task<IActionResult> Register()
         {
-            var model = new RegisterViewModel() { Role = UserRole.Student };
+            var model = new RegisterViewModel()
+            {
+                Role = UserRole.Student,
+                Canteens = await canteenRepository.GetAllCanteensAsync() 
+            };
+
+            if (model.Canteens == null || !model.Canteens.Any())
+            {
+                throw new Exception("Geen kantines gevonden.");
+            }
+
             return View(model);
         }
 
@@ -45,13 +61,14 @@ namespace TooGoodToGoAvans.UI.Controllers
             }
 
             var role = registerVM.Role.ToString();
-            if (!roleManager.RoleExistsAsync(role).Result)
+            if (!await roleManager.RoleExistsAsync(role))
             {
                 ModelState.AddModelError("", "Specified role does not exist");
             }
+
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(registerVM);
             }
 
             var user = new IdentityUser()
@@ -64,17 +81,33 @@ namespace TooGoodToGoAvans.UI.Controllers
 
             if (registerResult.Succeeded)
             {
-                // Een rol is een claim. Claims zijn algemener, rollen zijn iets makkelijker te gebruiken -->
                 await userManager.AddClaimAsync(user, new Claim("UserType", "user"));
-                await userManager.AddToRoleAsync(user, registerVM.Role.ToString());
+                await userManager.AddToRoleAsync(user, role);
 
-                //Student Student = new()
-                //{
-                //    Name = registerVM.Name,
-                //    Role = registerVM.Role,
-                //    IdentityId = user.Id,
-                //};
-                //StudentRepository.Add(Student);
+                if (registerVM.Role == UserRole.Student)
+                {
+                    var student = new Student(
+                        id: Guid.NewGuid(),
+                        name: registerVM.Name,
+                        birthdate: registerVM.Birthdate.Value,
+                        studentId: registerVM.StudentId,
+                        emailAddress: registerVM.EmailAddress,
+                        studentCity: registerVM.City,
+                        phonenumber: registerVM.Phonenumber
+                    );
+                    await studentRepository.AddAsync(student);
+                }
+                else if (registerVM.Role == UserRole.StaffMember)
+                {
+                    var staffMember = new StaffMember(
+                        staffMemberId: Guid.NewGuid(),
+                        name: registerVM.Name,
+                        employeeNumber: registerVM.StaffMemberId,
+                        workLocation: await canteenRepository.GetCanteenByIdAsync(registerVM.SelectedCanteenId), 
+                        staffmemberCity: registerVM.City
+                    );
+                    await staffMemberRepository.AddAsync(staffMember);
+                }
 
                 return RedirectToAction(nameof(Login), new { returnUrl = registerVM.ReturnUrl ?? "/" });
             }
@@ -83,13 +116,14 @@ namespace TooGoodToGoAvans.UI.Controllers
             {
                 ModelState.AddModelError(error.Code, error.Description);
             }
-            return View();
+
+            return View(registerVM);
         }
 
         [AllowAnonymous]
         public IActionResult Login(string returnUrl = "")
         {
-            return View(new LoginViewModel { ReturnUrl = returnUrl, });
+            return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
 
         [HttpPost]
@@ -99,22 +133,20 @@ namespace TooGoodToGoAvans.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 var user = await userManager.FindByNameAsync(loginVM.Name);
                 if (user != null)
                 {
                     await signInManager.SignOutAsync();
-                    if ((await signInManager.PasswordSignInAsync(user,
-                        loginVM.Password, false, false)).Succeeded)
+                    var result = await signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
+                    if (result.Succeeded)
                     {
-                        return RedirectToAction(nameof(DetailsAsync));
-                        //return Redirect(loginVM?.ReturnUrl ?? "/Guest/List");
+                        return View("Index");
                     }
                 }
             }
 
             ModelState.AddModelError("", "Invalid name or password");
-            return View();
+            return View(loginVM);
         }
 
         public async Task<IActionResult> DetailsAsync()
@@ -129,13 +161,11 @@ namespace TooGoodToGoAvans.UI.Controllers
                         Name = identityUser.UserName ?? "onbekend",
                         EmailAddress = identityUser.Email
                     };
-                    return View(loginVM);
+                    return View("Index", loginVM);
                 }
             }
 
             return RedirectToAction("Login", "Account");
         }
-
-
     }
 }

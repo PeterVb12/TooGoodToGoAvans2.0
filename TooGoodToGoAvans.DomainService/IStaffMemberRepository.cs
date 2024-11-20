@@ -9,7 +9,7 @@ namespace TooGoodToGoAvans.DomainService
 {
     public interface IStaffMemberRepository
     {
-        Task<StaffMember> AddStaffMemberAsync(StaffMember staffMember);
+        Task<StaffMember> AddAsync(StaffMember staffMember);
         Task<StaffMember> GetStaffMemberByIdAsync(int staffMemberId);
         Task<IEnumerable<StaffMember>> GetAllStaffMembersAsync();
         Task<StaffMember> UpdateStaffMemberAsync(StaffMember staffMember);

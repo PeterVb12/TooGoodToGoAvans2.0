@@ -10,18 +10,18 @@ namespace TooGoodToGoAvans.Domain.Models
     {
         public Guid StaffMemberId { get; set; }
         public string Name { get; set; }
-        public int EmployeeNumber { get; set; }
-
+        public string EmployeeNumber { get; set; }
         public Canteen WorkLocation { get; set; }
-
+        public City StaffmemberCity { get; set; }
         public StaffMember() { }
 
-        public StaffMember(Guid staffMemberId, string name, int employeeNumber, Canteen workLocation)
+        public StaffMember(Guid staffMemberId, string name, string employeeNumber, Canteen workLocation, City staffmemberCity)
         {
             StaffMemberId = staffMemberId;
             Name = name;
             EmployeeNumber = employeeNumber;
             WorkLocation = workLocation;
+            StaffmemberCity = staffmemberCity;
         }
     }
 }

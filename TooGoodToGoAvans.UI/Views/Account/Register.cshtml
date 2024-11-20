@@ -3,31 +3,87 @@
 
 <div>
     <form class="m-2" asp-action="Register" method="post">
-        <div asp-validation-summary="All">
-        </div>
+        <div asp-validation-summary="All"></div>
+
         <div class="form-group">
-            <label class="form-label" asp-for="Name"></label>
+            <label asp-for="Name"></label>
             <input class="form-control" asp-for="Name" />
         </div>
+
         <div class="form-group">
             <label asp-for="EmailAddress"></label>
-            <div><span asp-validation-for="EmailAddress" class="text-danger"></span></div>
-            <input asp-for="EmailAddress" class="form-control" />
+            <input class="form-control" asp-for="EmailAddress" />
+            <span asp-validation-for="EmailAddress" class="text-danger"></span>
         </div>
+
         <div class="form-group">
-            <label class="form-label" asp-for="Password"></label>
-            <input class="form-control" asp-for="Password" />
+            <label asp-for="Password"></label>
+            <input type="password" class="form-control" asp-for="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
         </div>
+
         <div class="form-group">
-            <label class="form-label" asp-for="PasswordConfirmation"></label>
-            <input class="form-control" asp-for="PasswordConfirmation" />
+            <label asp-for="PasswordConfirmation"></label>
+            <input type="password" class="form-control" asp-for="PasswordConfirmation" />
+            <span asp-validation-for="PasswordConfirmation" class="text-danger"></span>
         </div>
-        @* <div class="form-group">
-        <label class="form-label" asp-for="Role"></label>
-        <input class="form-control" asp-for="Role" />
-        </div> *@
-        <select asp-for="Role" asp-items="Html.GetEnumSelectList<UserRole>()"
-                class="form-control"></select>
+
+        <div class="form-group">
+            <label asp-for="Role"></label>
+            <select asp-for="Role" asp-items="Html.GetEnumSelectList<UserRole>()" class="form-control">
+            </select>
+            <span asp-validation-for="Role" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="City"></label>
+            <select asp-for="City" asp-items="Html.GetEnumSelectList<City>()" class="form-control">
+            </select>
+            <span asp-validation-for="City" class="text-danger"></span>
+        </div>
+
+        @if (Model.Canteens != null && Model.Canteens.Any())
+        {
+            <div>
+                <label for="SelectedCanteenId">Kies uw kantine</label>
+                <select asp-for="SelectedCanteenId" asp-items="@(new SelectList(Model.Canteens, "Id", "CanteenLocation"))">
+                    <option value="">Selecteer een kantine</option>
+                </select>
+            </div>
+        }
+        else
+        {
+            <p>Geen kantines gevonden. Neem contact op met de beheerder.</p>
+        }
+
+        <!-- Student fields -->
+        <h5>Student Information (only if Role is Student)</h5>
+        <div class="form-group">
+            <label asp-for="StudentId"></label>
+            <input class="form-control" asp-for="StudentId" />
+            <span asp-validation-for="StudentId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Birthdate"></label>
+            <input type="date" class="form-control" asp-for="Birthdate" />
+            <span asp-validation-for="Birthdate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Phonenumber"></label>
+            <input class="form-control" asp-for="Phonenumber" />
+            <span asp-validation-for="Phonenumber" class="text-danger"></span>
+        </div>
+
+        <!-- StaffMember fields -->
+        <h5>Staff Member Information (only if Role is StaffMember)</h5>
+        <div class="form-group">
+            <label asp-for="StaffMemberId"></label>
+            <input class="form-control" asp-for="StaffMemberId" />
+            <span asp-validation-for="StaffMemberId" class="text-danger"></span>
+        </div>
+
         <button class="btn btn-primary" type="submit">Register</button>
     </form>
 </div>

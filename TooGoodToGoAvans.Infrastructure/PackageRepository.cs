@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +11,22 @@ namespace TooGoodToGoAvans.Infrastructure
 {
     public class PackageRepository : IPackageRepository
     {
-        public Task AddPackageAsync(Package package)
+        private readonly TooGoodToGoAvansDBContext _context;
+
+        public PackageRepository(TooGoodToGoAvansDBContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task AddPackageAsync(Package package)
+        {
+
+            _context.Packages.Add(package);
+            await _context.SaveChangesAsync();
         }
 
-        public IEnumerable<Package> GetPackages()
+        public async Task<IEnumerable<Package>> GetPackagesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Packages.ToListAsync();
         }
 
         public Task RemovePackageAsync(Package package)
@@ -34,5 +43,7 @@ namespace TooGoodToGoAvans.Infrastructure
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

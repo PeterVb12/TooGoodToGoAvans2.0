@@ -2,27 +2,87 @@
 
 @{
     ViewBag.Title = "Log In";
-
 }
 
-<div class="text-danger" asp-validation-summary="All"></div>
+<!-- Bootstrap CSS inladen -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-<form asp-action="Login" asp-controller="Account" method="post">
-    <input type="hidden" asp-for="ReturnUrl" />
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <div><span asp-validation-for="Name" class="text-danger"></span></div>
-        <input asp-for="Name" class="form-control" />
+<!-- CSS voor kleurenschema A -->
+<style>
+    /* Achtergrond van de pagina */
+    body {
+        background-color: #E8F5E9; /* Lichtgroene achtergrond */
+    }
+
+    /* Navigatiebalk */
+    .navbar {
+        background-color: #4CAF50; /* Basisgroen voor de navigatiebalk */
+    }
+
+        .navbar .nav-link, .navbar .navbar-brand {
+            color: #FFFFFF !important; /* Witte tekst in de navigatiebalk */
+        }
+
+    /* Knoppen */
+    .btn-primary {
+        background-color: #C62828; /* Donkergroen voor knoppen */
+        border: none;
+    }
+
+    /* Card achtergrond */
+    .card {
+        background-color: #FFFFFF; /* Witte achtergrond voor de card */
+        border: none;
+    }
+</style>
+
+<!-- Navigatiebalk -->
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">TooGoodToGoAvans</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Account/Register">Register</a>
+            </li>
+        </ul>
     </div>
-    @*     <div class="form-group">
-    <label asp-for="EmailAddress"></label>
-    <div><span asp-validation-for="EmailAddress" class="text-danger"></span></div>
-    <input asp-for="EmailAddress" class="form-control" />
-    </div> *@
-    <div class="form-group">
-        <label asp-for="Password"></label>
-        <div><span asp-validation-for="Password" class="text-danger"></span></div>
-        <input asp-for="Password" class="form-control" />
+</nav>
+
+<!-- Login Card -->
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4" style="width: 400px;">
+        <h3 class="card-title text-center mb-4">@ViewBag.Title</h3>
+
+        <div class="text-danger" asp-validation-summary="All"></div>
+
+        <form asp-action="Login" asp-controller="Account" method="post">
+            <input type="hidden" asp-for="ReturnUrl" />
+
+            <!-- Name Input -->
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <div><span asp-validation-for="Name" class="text-danger"></span></div>
+                <input asp-for="Name" class="form-control" placeholder="Enter your name" />
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <div><span asp-validation-for="Password" class="text-danger"></span></div>
+                <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password" />
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">Log In</button>
+        </form>
     </div>
-    <button class="btn btn-primary" type="submit">Log In</button>
-</form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

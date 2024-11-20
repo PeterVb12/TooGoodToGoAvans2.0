@@ -2,7 +2,8 @@ using TooGoodToGoAvans.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using TooGoodToGoAvans.DomainService;
-using TooGoodToGoAvans.Domain.Models; 
+using TooGoodToGoAvans.Domain.Models;
+using TooGoodToGoAvans.UI;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
-
+builder.Services.AddScoped<IStaffMemberRepository, StaffMemberRepository>();
+builder.Services.AddScoped<ICanteenRepository, CanteenRepository>();
+builder.Services.AddScoped<IPackageRepository, PackageRepository>();
+builder.Services.AddScoped<IPackageService, PackageService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 string? connectionString;
 string? authConnectionString;

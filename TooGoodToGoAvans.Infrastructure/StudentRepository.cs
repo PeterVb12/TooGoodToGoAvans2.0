@@ -10,7 +10,7 @@ namespace TooGoodToGoAvans.Infrastructure
 {
     public class StudentRepository : IStudentRepository
     {
-        public Task<Student> Add(Student student)
+        public Task<Student> AddAsync(Student student)
         {
             throw new NotImplementedException();
         }

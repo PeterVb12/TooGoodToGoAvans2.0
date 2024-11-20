@@ -12,5 +12,8 @@ namespace TooGoodToGoAvans.DomainService
         public Task<bool> CheckIfPackageIsReserved();
         public Task<IEnumerable<Package>> GetPackagesSpecificLocation(string location);
         public Task<IEnumerable<Package>> GetPackagesSpecificMealtype(string mealType);
+        public Task CreateValidPackageAsync(Package package);
+        public Task RemovePackageAsync(Package package);
+
     }
 }

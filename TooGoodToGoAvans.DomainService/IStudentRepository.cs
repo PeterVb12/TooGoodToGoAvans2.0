@@ -9,7 +9,7 @@ namespace TooGoodToGoAvans.DomainService
 {
     public interface IStudentRepository
     {
-        Task<Student> Add(Student student);
+        Task<Student> AddAsync(Student student);
         Task<Student> GetStudentByIdAsync(int studentId);
         Task<IEnumerable<Student>> GetAllStudentsAsync();
         Task<Student> UpdateStudentAsync(Student student);

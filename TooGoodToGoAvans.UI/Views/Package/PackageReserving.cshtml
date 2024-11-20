@@ -4,13 +4,40 @@
     ViewData["Title"] = "Available Packages";
 }
 
-<div class="container mt-4">
-    <h2 class="mb-4">Available Packages</h2>
-    <div class="row">
+<!-- Navigatiebalk -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">TooGoodToGoAvans</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Packages">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Container voor de pakketten -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Available Packages</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach (var package in Model)
         {
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
+            <div class="col">
+                <div class="card h-100 shadow-sm">
                     <div class="card-body">
                         <h5 class="card-title">@package.Name</h5>
                         <p class="card-text">
@@ -36,11 +63,11 @@
                             <p>No products available</p>
                         }
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer text-muted">
                         @if (package.ReservedBy != null)
                         {
                             <small class="text-muted">Reserved by @package.ReservedBy.Name</small>
-                        }
+                         }
                         else
                         {
                             <small class="text-muted">Not reserved yet</small>

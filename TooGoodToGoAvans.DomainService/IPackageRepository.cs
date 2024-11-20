@@ -9,7 +9,7 @@ namespace TooGoodToGoAvans.DomainService
 {
     public interface IPackageRepository
     {
-        public IEnumerable<Package> GetPackages();
+        public Task <IEnumerable<Package>> GetPackagesAsync();
         public Task AddPackageAsync(Package package);
         public Task UpdatePackageAsync(Package package);
         public Task RemovePackageAsync(Package package);

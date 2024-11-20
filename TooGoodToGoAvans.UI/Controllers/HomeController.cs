@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using TooGoodToGoAvans.DomainService;
+using TooGoodToGoAvans.Infrastructure;
 using TooGoodToGoAvans.Models;
 
 namespace TooGoodToGoAvans.Controllers
@@ -7,10 +9,12 @@ namespace TooGoodToGoAvans.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IPackageRepository _packageRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IPackageRepository packageRepository)
         {
             _logger = logger;
+            _packageRepository = packageRepository;
         }
 
         public IActionResult Index()
@@ -28,5 +32,17 @@ namespace TooGoodToGoAvans.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public async Task<IActionResult> PackageReserving()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                // Gebruiker is niet ingelogd, stuur door naar login
+                return RedirectToAction("Login", "Account");
+            }
+            var packages = await _packageRepository.GetPackagesAsync();
+            return View("/Views/Package/PackageReserving.cshtml", packages);
+        }
+
     }
 }

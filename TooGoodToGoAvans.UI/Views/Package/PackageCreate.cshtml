@@ -1,0 +1,79 @@
+﻿@model TooGoodToGoAvans.UI.Models.PackageViewModel
+
+<form asp-action="CreatePackage" method="post">
+    <!-- Algemene validatiesamenvatting -->
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" required />
+        <!-- Foutmelding voor het Name veld -->
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateAndTimePickup"></label>
+        <input asp-for="DateAndTimePickup" type="datetime-local" class="form-control" required />
+        <!-- Foutmelding voor DateAndTimePickup -->
+        <span asp-validation-for="DateAndTimePickup" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateAndTimeLastPickup"></label>
+        <input asp-for="DateAndTimeLastPickup" type="datetime-local" class="form-control" required />
+        <!-- Foutmelding voor DateAndTimeLastPickup -->
+        <span asp-validation-for="DateAndTimeLastPickup" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" type="number" step="0.01" class="form-control" required />
+        <!-- Foutmelding voor Price -->
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MealType"></label>
+        <input asp-for="MealType" class="form-control" required />
+        <!-- Foutmelding voor MealType -->
+        <span asp-validation-for="MealType" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Is het pakket 18+?</label>
+        <input type="checkbox" asp-for="AgeRestricted" class="form-check-input" />
+        <label class="form-check-label" for="AgeRestricted">Ja, het pakket is 18+</label>
+        <!-- Foutmelding voor AgeRestricted -->
+        <span asp-validation-for="AgeRestricted" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="CanteenServedAt">Canteen Served At:</label>
+        <select asp-for="CanteenServedAt" class="form-control" required>
+            <option value="">Selecteer een kantine</option>
+            <!-- Voeg hier je kantine-opties toe -->
+            <option value="Breda">Breda</option>
+            <option value="Tilburg">Tilburg</option>
+            <option value="Den Bosch">Den Bosch</option>
+        </select>
+        <!-- Foutmelding voor CanteenServedAt -->
+        <span asp-validation-for="CanteenServedAt" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Select Products:</label>
+        <div>
+            @foreach (var product in Model.Products)
+            {
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" asp-for="@product.Selected" value="@product.Id" />
+                    <label class="form-check-label">@product.Name</label>
+                </div>
+            }
+        </div>
+        <!-- Foutmelding voor geselecteerde producten -->
+        <span asp-validation-for="Products" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Package</button>
+</form>

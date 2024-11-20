@@ -13,6 +13,8 @@ namespace TooGoodToGoAvans.Domain.Models
         public bool Alcoholic { get; set; }
         public byte[] image { get; set; }
 
+        public ICollection<Package>? Packages { get; set; }
+
         public Product(Guid id, string name, bool alcoholic, byte[] image)
         {
             Id = id;

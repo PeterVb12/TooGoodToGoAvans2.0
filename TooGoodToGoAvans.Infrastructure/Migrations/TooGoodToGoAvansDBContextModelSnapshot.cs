@@ -22,6 +22,21 @@ namespace TooGoodToGoAvans.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("PackageProduct", b =>
+                {
+                    b.Property<Guid>("PackagesPackageId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("PackagesPackageId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("PackageProduct");
+                });
+
             modelBuilder.Entity("TooGoodToGoAvans.Domain.Models.Canteen", b =>
                 {
                     b.Property<Guid>("Id")
@@ -97,16 +112,11 @@ namespace TooGoodToGoAvans.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("PackageId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<byte[]>("image")
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PackageId");
 
                     b.ToTable("Products");
                 });
@@ -117,12 +127,16 @@ namespace TooGoodToGoAvans.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("EmployeeNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("EmployeeNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StaffmemberCity")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("WorkLocationId")
                         .HasColumnType("uniqueidentifier");
@@ -170,6 +184,21 @@ namespace TooGoodToGoAvans.Infrastructure.Migrations
                     b.ToTable("Students");
                 });
 
+            modelBuilder.Entity("PackageProduct", b =>
+                {
+                    b.HasOne("TooGoodToGoAvans.Domain.Models.Package", null)
+                        .WithMany()
+                        .HasForeignKey("PackagesPackageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TooGoodToGoAvans.Domain.Models.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("TooGoodToGoAvans.Domain.Models.Package", b =>
                 {
                     b.HasOne("TooGoodToGoAvans.Domain.Models.Canteen", "CanteenServedAt")
@@ -185,13 +214,6 @@ namespace TooGoodToGoAvans.Infrastructure.Migrations
                     b.Navigation("ReservedBy");
                 });
 
-            modelBuilder.Entity("TooGoodToGoAvans.Domain.Models.Product", b =>
-                {
-                    b.HasOne("TooGoodToGoAvans.Domain.Models.Package", null)
-                        .WithMany("Products")
-                        .HasForeignKey("PackageId");
-                });
-
             modelBuilder.Entity("TooGoodToGoAvans.Domain.Models.StaffMember", b =>
                 {
                     b.HasOne("TooGoodToGoAvans.Domain.Models.Canteen", "WorkLocation")
@@ -201,11 +223,6 @@ namespace TooGoodToGoAvans.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("WorkLocation");
-                });
-
-            modelBuilder.Entity("TooGoodToGoAvans.Domain.Models.Package", b =>
-                {
-                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }
