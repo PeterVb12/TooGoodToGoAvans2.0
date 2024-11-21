@@ -45,16 +45,32 @@ jobs:
 
     # Bundle EF migrations (Main Application)
     - name: Bundle EF project (Main App)
+      env:
+        AZURE_DB_CONNECTION: ${{ secrets.AZURE_DB_CONNECTION }}
       run:  |
         dotnet tool install --global dotnet-ef
         dotnet tool restore
-        dotnet ef migrations bundle --output ./publish/migrations/main_migrations.exe --startup-project ./TooGoodToGoAvans.WebApi --project ./TooGoodToGoAvans.Infrastructure --self-contained -r linux-x64 --context TooGoodToGoAvansDBContext
+        dotnet ef migrations bundle \
+          --output ./publish/migrations/main_migrations.exe \
+          --startup-project ./TooGoodToGoAvans.WebApi \
+          --project ./TooGoodToGoAvans.Infrastructure \
+          --self-contained -r linux-x64 \
+          --context TooGoodToGoAvansDBContext \
+          --connection "$AZURE_DB_CONNECTION"
     
     # Bundle EF migrations (Identity Framework)
     - name: Bundle EF project (Identity Framework)
+      env:
+        AZURE_AUTH_DB_CONNECTION: ${{ secrets.AZURE_AUTH_DB_CONNECTION }}
       run:  |
         dotnet tool restore
-        dotnet ef migrations bundle --output ./publish/migrations/identity_migrations.exe --startup-project ./TooGoodToGoAvans.WebApi --project ./TooGoodToGoAvans.Infrastructure --self-contained -r linux-x64 --context TooGoodToGoAvansDBContext_IF
+        dotnet ef migrations bundle \
+          --output ./publish/migrations/identity_migrations.exe \
+          --startup-project ./TooGoodToGoAvans.WebApi \
+          --project ./TooGoodToGoAvans.Infrastructure \
+          --self-contained -r linux-x64 \
+          --context TooGoodToGoAvansDBContext_IF \
+          --connection "$AZURE_AUTH_DB_CONNECTION"
     
 
     # Upload artifacts
