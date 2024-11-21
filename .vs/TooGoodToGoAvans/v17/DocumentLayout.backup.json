@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{2892B83B-687C-4250-B61E-D70A2D1F1A8F}|TooGoodToGoAvans.UI\\TooGoodToGoAvans.UI.csproj|solutionrelative:toogoodtogoavans.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2892B83B-687C-4250-B61E-D70A2D1F1A8F}|TooGoodToGoAvans.UI\\TooGoodToGoAvans.UI.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans.ui\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{2892B83B-687C-4250-B61E-D70A2D1F1A8F}|TooGoodToGoAvans.UI\\TooGoodToGoAvans.UI.csproj|solutionrelative:toogoodtogoavans.ui\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2892B83B-687C-4250-B61E-D70A2D1F1A8F}|TooGoodToGoAvans.UI\\TooGoodToGoAvans.UI.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans.ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2892B83B-687C-4250-B61E-D70A2D1F1A8F}|TooGoodToGoAvans.UI\\TooGoodToGoAvans.UI.csproj|solutionrelative:toogoodtogoavans.ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -100,7 +96,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.UI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -118,14 +114,14 @@
               "RelativeDocumentMoniker": "TooGoodToGoAvans.UI\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "TooGoodToGoAvans.UI\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAB0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-31T14:21:08.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.UI\\Views\\Account\\Login.cshtml",
@@ -137,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.UI\\Controllers\\AccountController.cs",
@@ -149,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "TooGoodToGoAvansDBContext.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\TooGoodToGoAvansDBContext.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.Infrastructure\\TooGoodToGoAvansDBContext.cs",
@@ -161,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\Models\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.UI\\Models\\RegisterViewModel.cs",
@@ -173,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "StudentRepository.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.Infrastructure\\StudentRepository.cs",
@@ -185,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Package.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\Package.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.Domain\\Models\\Package.cs",
@@ -197,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.UI\\Views\\Home\\Index.cshtml",
@@ -209,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.UI\\Views\\Account\\Register.cshtml",
@@ -221,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Canteen.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.Domain\\Models\\Canteen.cs",
@@ -233,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Domain\\Models\\Product.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.Domain\\Models\\Product.cs",
@@ -245,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\Program.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.UI\\Program.cs",
@@ -257,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "IPackageService.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.DomainService\\IPackageService.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.DomainService\\IPackageService.cs",
@@ -269,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "TooGoodToGoAvansDBContext_IF.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.Infrastructure\\TooGoodToGoAvansDBContext_IF.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.Infrastructure\\TooGoodToGoAvansDBContext_IF.cs",
@@ -281,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans\\Controllers\\HomeController.cs",
@@ -293,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "PackageReserving.cshtml",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
               "RelativeDocumentMoniker": "TooGoodToGoAvans\\Views\\Package\\PackageReserving.cshtml",
@@ -305,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans\\appsettings.json",
               "RelativeDocumentMoniker": "TooGoodToGoAvans\\appsettings.json",
@@ -314,40 +310,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-14T14:25:08.741Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "56c39719-c47c-42f7-8a39-bc12cf0e52ad",
-        "Display": 0,
-        "X": 398,
-        "Y": 134,
-        "Width": 1142,
-        "Height": 686,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "styles.css",
-              "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\wwwroot\\css\\styles.css",
-              "RelativeDocumentMoniker": "TooGoodToGoAvans.UI\\wwwroot\\css\\styles.css",
-              "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\wwwroot\\css\\styles.css",
-              "RelativeToolTip": "TooGoodToGoAvans.UI\\wwwroot\\css\\styles.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-31T14:23:35.813Z",
-              "EditorCaption": ""
             }
           ]
         }
