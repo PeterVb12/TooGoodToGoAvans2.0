@@ -34,25 +34,25 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: deploy-migrations-main
-        path: ./migrations/main
+        path: ./migrations
 
     - name: Download Identity Migrations
       uses: actions/download-artifact@v4
       with:
         name: deploy-migrations-identity
-        path: ./migrations/identity
+        path: ./migrations/TooGoodToGoAvansDBContext_IFMigrations
 
     # Execute EF migrations (Main Database)
     - name: Execute EF migrations (Main Database)
       run: |
-        chmod +x ./migrations/main/main_migrations.exe
-        ./migrations/main/main_migrations.exe --connection "Server=tcp:${{ secrets.AZURE_SQL_SERVER_NAME }}.database.windows.net,1433;Database=${{ secrets.AZURE_SQL_DATABASE_NAME }};User ID=app_user;Password=${{ secrets.AZURE_SQL_APP_USER_PASSWORD }};Trusted_Connection=False;Encrypt=True;"
+        chmod +x ./migrations/main_migrations.exe
+        ./migrations/main_migrations.exe --connection "Server=tcp:${{ secrets.AZURE_SQL_SERVER_NAME }}.database.windows.net,1433;Database=${{ secrets.AZURE_SQL_DATABASE_NAME }};User ID=app_user;Password=${{ secrets.AZURE_SQL_APP_USER_PASSWORD }};Trusted_Connection=False;Encrypt=True;"
 
     # Execute EF migrations (Identity Database)
     - name: Execute EF migrations (Identity Database)
       run: |
-        chmod +x ./migrations/identity/identity_migrations.exe
-        ./migrations/identity/identity_migrations.exe --connection "Server=tcp:${{ secrets.AZURE_SQL_SERVER_NAME_IDENTITY }}.database.windows.net,1433;Database=${{ secrets.AZURE_SQL_DATABASE_NAME_IDENTITY }};User ID=identity_user;Password=${{ secrets.AZURE_SQL_IDENTITY_USER_PASSWORD }};Trusted_Connection=False;Encrypt=True;"
+        chmod +x ./migrations/identity_migrations.exe
+        ./migrations/identity_migrations.exe --connection "Server=tcp:${{ secrets.AZURE_SQL_SERVER_NAME_IDENTITY }}.database.windows.net,1433;Database=${{ secrets.AZURE_SQL_DATABASE_NAME_IDENTITY }};User ID=identity_user;Password=${{ secrets.AZURE_SQL_IDENTITY_USER_PASSWORD }};Trusted_Connection=False;Encrypt=True;"
 
     # Deploy API to Azure
     - name: Deploy API to Azure Web App
