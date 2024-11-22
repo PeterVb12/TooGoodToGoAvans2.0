@@ -54,6 +54,12 @@ jobs:
         chmod +x ./migrations/identity_migrations.exe
         ./migrations/identity_migrations.exe --connection "Server=tcp:${{ secrets.AZURE_SQL_SERVER_NAME_IDENTITY }}.database.windows.net,1433;Database=${{ secrets.AZURE_SQL_DATABASE_NAME_IDENTITY }};User ID=beheerder;Password=${{ secrets.AZURE_SQL_IDENTITY_USER_PASSWORD }};Trusted_Connection=False;Encrypt=True;"
 
+    # Log in to Azure
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
     # Deploy API to Azure
     - name: Deploy API to Azure Web App
       uses: azure/webapps-deploy@v2
