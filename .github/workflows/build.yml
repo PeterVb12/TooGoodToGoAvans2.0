@@ -84,10 +84,10 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
           name: deploy-migrations-main
-          path: ./publish/migrations/main_migrations
+          path: ./publish/migrations/main_migrations.exe
 
     - name: Upload artifact Migrations (Identity)
       uses: actions/upload-artifact@v4
       with:
           name: deploy-migrations-identity
-          path: ./publish/migrations/identity_migrations
+          path: ./publish/migrations/identity_migrations.exe
