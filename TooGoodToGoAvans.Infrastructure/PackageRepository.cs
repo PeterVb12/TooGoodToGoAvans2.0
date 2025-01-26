@@ -34,9 +34,31 @@ namespace TooGoodToGoAvans.Infrastructure
             throw new NotImplementedException();
         }
 
-        public Task ReservePackage(Student student)
+        public async Task ReservePackageAsync(Guid packageId, string userId)
         {
-            throw new NotImplementedException();
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.UserId == userId);
+            if (student == null)
+            {
+                throw new Exception("Student not found for the logged-in user.");
+            }
+
+            var package = await _context.Packages.FirstOrDefaultAsync(p => p.PackageId == packageId);
+            if (package == null)
+            {
+                throw new Exception("Package not found.");
+            }
+
+            if (package.ReservedBy != null)
+            {
+                throw new Exception("Package is already reserved.");
+            }
+
+            // Koppel de student aan het pakket
+            package.ReservedBy = student;
+
+            // Sla de wijzigingen op
+            _context.Packages.Update(package);
+            await _context.SaveChangesAsync();
         }
 
         public Task UpdatePackageAsync(Package package)
@@ -44,6 +66,12 @@ namespace TooGoodToGoAvans.Infrastructure
             throw new NotImplementedException();
         }
 
+        public async Task<IEnumerable<Package>> GetReservedPackagesByUserAsync(string userId)
+        {
+            return await _context.Packages
+                .Where(p => p.ReservedBy != null && p.ReservedBy.UserId == userId)
+                .ToListAsync();
+        }
 
     }
 }

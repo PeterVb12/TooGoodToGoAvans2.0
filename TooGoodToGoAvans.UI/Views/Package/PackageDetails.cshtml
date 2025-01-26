@@ -1,0 +1,39 @@
+﻿@model TooGoodToGoAvans.Domain.Models.Package
+
+@{
+    ViewData["Title"] = "Package Details";
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">@Model.Name</h2>
+    <p><strong>Price:</strong> €@Model.Price</p>
+    <p><strong>Pickup Time:</strong> @Model.DateAndTimePickup.ToString("g")</p>
+    <p><strong>Last Pickup Time:</strong> @Model.DateAndTimeLastPickup.ToString("g")</p>
+    <p><strong>Age Restricted:</strong> @(Model.AgeRestricted ? "Yes" : "No")</p>
+    <p><strong>Meal Type:</strong> @Model.MealType</p>
+    <p><strong>Canteen:</strong> @(Model.CanteenServedAt != null ? Model.CanteenServedAt.CanteenLocation : "N/A")</p>
+
+    @if (Model.Products != null && Model.Products.Any())
+    {
+        <h3>Products:</h3>
+        <ul>
+            @foreach (var product in Model.Products)
+            {
+                <li>@product.Name</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No products available</p>
+    }
+
+    <div class="mt-3">
+        <a asp-controller="Package" asp-action="ReservePackage" asp-route-packageId="@Model.PackageId" class="btn btn-primary">Reserveer pakket</a>
+    </div>
+
+    <div class="mt-4">
+        <a href="/Packages" class="btn btn-secondary">Back to Packages</a>
+    </div>
+</div>

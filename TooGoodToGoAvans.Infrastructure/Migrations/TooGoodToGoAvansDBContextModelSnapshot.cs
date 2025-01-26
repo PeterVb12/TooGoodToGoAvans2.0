@@ -70,6 +70,9 @@ namespace TooGoodToGoAvans.Infrastructure.Migrations
                     b.Property<Guid?>("CanteenServedAtId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("CityLocation")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("DateAndTimeLastPickup")
                         .HasColumnType("datetime2");
 
@@ -138,6 +141,10 @@ namespace TooGoodToGoAvans.Infrastructure.Migrations
                     b.Property<int>("StaffmemberCity")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("WorkLocationId")
                         .HasColumnType("uniqueidentifier");
 
@@ -175,6 +182,10 @@ namespace TooGoodToGoAvans.Infrastructure.Migrations
                     b.Property<string>("StudentId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

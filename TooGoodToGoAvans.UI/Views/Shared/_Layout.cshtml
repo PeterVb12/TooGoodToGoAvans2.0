@@ -55,22 +55,40 @@
         <div class="container px-5">
             <a class="navbar-brand" href="#!">
                 <img src="~/AvansToGo_logo.png" alt="Avans To Go Logo" style="height: 70px; width: auto;">
-                Too Good To Go
+                Avans To Go
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Package" asp-action="PackageCreate">Create Package</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Over ons</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Package" asp-action="PackageCreate">Pakket aanmaken</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="PackageReserving">Packages</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="PackageReserving">Pakketten</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="ReservedPackages">Reserveringen</a>
+                    </li>
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <form asp-controller="Account" asp-action="Logout" method="post" style="display:inline;">
+                                <button type="submit" class="btn btn-link nav-link text-danger" style="padding: 0;">Logout</button>
+                            </form>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-success" asp-controller="Account" asp-action="Login">Login</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

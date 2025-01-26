@@ -4,6 +4,7 @@ using TooGoodToGoAvans.DomainService;
 using TooGoodToGoAvans.Infrastructure;
 using TooGoodToGoAvans.UI.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace TooGoodToGoAvans.UI.Controllers
 {
@@ -17,6 +18,7 @@ namespace TooGoodToGoAvans.UI.Controllers
             _packageService = packageService;
             _packageRepository = packageRepository;
             _productRepository = productRepository;
+
         }
 
         [HttpGet]
@@ -87,6 +89,44 @@ namespace TooGoodToGoAvans.UI.Controllers
             }).ToList();
 
             return View("/Views/Package/PackageCreate.cshtml", model);
+        }
+
+        public async Task<IActionResult> PackageDetails(Guid id)
+        {
+            Console.WriteLine($"Package ID: {id}");
+            var packages = await _packageRepository.GetPackagesAsync();
+
+            var package = packages
+                .Where(p => p.PackageId == id)
+                .FirstOrDefault();
+
+            if (package == null)
+            {
+                return NotFound();
+            }
+            Console.WriteLine($"Opgehaalde package id: + {package.PackageId}");
+            return View(package);
+        }
+
+        public async Task<IActionResult> ReservePackage(Guid packageId)
+        {
+            try
+            {
+                var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                if (userId == null)
+                {
+                    return Unauthorized();
+                }
+                Console.WriteLine($"UserId: {userId}, PackageId: {packageId}");
+                await _packageRepository.ReservePackageAsync(packageId, userId);
+
+                return RedirectToAction("PackageReserving", "Home", new { id = packageId });
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                return View("Error");
+            }
         }
 
 

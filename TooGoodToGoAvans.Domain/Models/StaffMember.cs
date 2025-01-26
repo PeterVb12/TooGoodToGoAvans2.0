@@ -15,6 +15,9 @@ namespace TooGoodToGoAvans.Domain.Models
         public City StaffmemberCity { get; set; }
         public StaffMember() { }
 
+        // Identity UserId
+        public string UserId { get; set; }
+
         public StaffMember(Guid staffMemberId, string name, string employeeNumber, Canteen workLocation, City staffmemberCity)
         {
             StaffMemberId = staffMemberId;

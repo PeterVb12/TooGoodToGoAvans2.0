@@ -44,5 +44,20 @@ namespace TooGoodToGoAvans.Controllers
             return View("/Views/Package/PackageReserving.cshtml", packages);
         }
 
+        public async Task<IActionResult> ReservedPackages()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+            {
+                return Unauthorized(); 
+            }
+
+            var packages = await _packageRepository.GetReservedPackagesByUserAsync(userId);
+            return View("/Views/Package/ReservedPackages.cshtml", packages);
+        }
     }
 }

@@ -20,16 +20,13 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 string? connectionString;
 string? authConnectionString;
 
-// Controleer of het een development-omgeving is
 if (builder.Environment.IsDevelopment())
 {
-    // Gebruik lokale connecties
     connectionString = builder.Configuration.GetConnectionString("LocalConnection");
     authConnectionString = builder.Configuration.GetConnectionString("LocalAuthConnection");
 }
 else
 {
-    // Gebruik Azure connecties voor productie
     connectionString = builder.Configuration.GetConnectionString("AzureConnection");
     authConnectionString = builder.Configuration.GetConnectionString("AzureAuthConnection");
 }
@@ -41,12 +38,10 @@ builder.Services.AddDbContext<TooGoodToGoAvansDBContext>(options =>
 builder.Services.AddDbContext<TooGoodToGoAvansDBContext_IF>(options =>
     options.UseSqlServer(authConnectionString));
 
-// IF gedeelte
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
-    // Opties voor IF biedt, kies zelf wat relevant is -->
+
     options.User.RequireUniqueEmail = true;
     options.SignIn.RequireConfirmedPhoneNumber = false;
-
     options.Password.RequireDigit = false;
     options.Password.RequireLowercase = false;
     options.Password.RequireUppercase = false;
@@ -54,9 +49,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
     options.Password.RequiredLength = 3;
 })
 .AddRoles<IdentityRole>()// <-- Support voor role based authz
-// Welke context voor persistentie -->
 .AddEntityFrameworkStores<TooGoodToGoAvansDBContext_IF>()
-// Tokens voor wawo reset, tfa, etc -->
 .AddDefaultTokenProviders();
 
 var app = builder.Build();
@@ -65,13 +58,11 @@ using (var scope = app.Services.CreateScope())
 {
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-    // Voor elk element in de UserRole enum, controleer of de rol al bestaat
     foreach (var role in Enum.GetValues(typeof(UserRole)))
     {
         var roleName = role.ToString();
         if (!await roleManager.RoleExistsAsync(roleName))
         {
-            // Creëer de rol als deze niet bestaat
             await roleManager.CreateAsync(new IdentityRole(roleName));
         }
     }

@@ -38,8 +38,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxQYWNrYWdlQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AVANS/AVANS_jaar2/Periode_1/SSWP_Project_TooGoodToGo/TooGoodToGoAvans/TooGoodToGoAvans.UI/Views/Package/PackageDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxQYWNrYWdlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AVANS/AVANS_jaar2/Periode_1/SSWP_Project_TooGoodToGo/TooGoodToGoAvans/TooGoodToGoAvans.UI/Views/Package/PackageReserving.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxQYWNrYWdlUmVzZXJ2aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AVANS/AVANS_jaar2/Periode_1/SSWP_Project_TooGoodToGo/TooGoodToGoAvans/TooGoodToGoAvans.UI/Views/Package/ReservedPackages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxSZXNlcnZlZFBhY2thZ2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AVANS/AVANS_jaar2/Periode_1/SSWP_Project_TooGoodToGo/TooGoodToGoAvans/TooGoodToGoAvans.UI/Views/Shared/Error.cshtml]

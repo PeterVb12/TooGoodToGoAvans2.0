@@ -18,7 +18,12 @@ namespace TooGoodToGoAvans.Domain.Models
         public City StudentCity { get; set; }
         public string Phonenumber { get; set; }
 
-        public Student(Guid id, string name, DateTime birthdate, string studentId, string emailAddress, City studentCity, string phonenumber)
+        // Identity UserId
+        public string UserId { get; set; }
+
+        public Student() { }
+
+        public Student(Guid id, string name, DateTime birthdate, string studentId, string emailAddress, City studentCity, string phonenumber, string userId)
         {
             Id = id;
             Name = name;
@@ -27,6 +32,7 @@ namespace TooGoodToGoAvans.Domain.Models
             EmailAddress = emailAddress;
             StudentCity = studentCity;
             Phonenumber = phonenumber;
+            UserId = userId;
         }
     }
 }

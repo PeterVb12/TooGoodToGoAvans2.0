@@ -14,6 +14,7 @@ namespace TooGoodToGoAvans.DomainService
         public Task UpdatePackageAsync(Package package);
         public Task RemovePackageAsync(Package package);
 
-        public Task ReservePackage(Student student);
+        public Task ReservePackageAsync(Guid packageId, string userId);
+        public Task<IEnumerable<Package>> GetReservedPackagesByUserAsync(string userId);
     }
 }

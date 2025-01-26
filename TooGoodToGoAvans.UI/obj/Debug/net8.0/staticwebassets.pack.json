@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\AvansToGo_logo.png"
     },
     {
+      "Id": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\wwwroot\\avanstogobanner2.0.jpeg",
+      "PackagePath": "staticwebassets\\avanstogobanner2.0.jpeg"
+    },
+    {
       "Id": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },

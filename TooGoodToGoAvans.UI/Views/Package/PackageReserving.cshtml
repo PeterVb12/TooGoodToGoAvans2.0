@@ -2,33 +2,8 @@
 
 @{
     ViewData["Title"] = "Available Packages";
+    Layout = "_Layout";
 }
-
-<!-- Navigatiebalk -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">TooGoodToGoAvans</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/Packages">Packages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/About">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/Contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
 
 <!-- Container voor de pakketten -->
 <div class="container mt-5">
@@ -72,6 +47,9 @@
                         {
                             <small class="text-muted">Not reserved yet</small>
                         }
+                        </div>
+                    <div class="mt-3">
+                        <a asp-controller="Package" asp-action="PackageDetails" asp-route-id="@package.PackageId" class="btn btn-primary">Reserve</a>
                     </div>
                 </div>
             </div>

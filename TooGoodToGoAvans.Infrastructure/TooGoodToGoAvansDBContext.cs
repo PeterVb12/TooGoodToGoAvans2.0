@@ -22,31 +22,6 @@ namespace TooGoodToGoAvans.Infrastructure
         public DbSet<Package> Packages { get; set; } = null!;   
         public DbSet<Canteen> Canteens { get; set; } = null!;
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Canteen>().HasData(
-                new Canteen(
-                    id: Guid.NewGuid(),
-                    city: City.Breda,
-                    canteenLocation: "Breda Campus Kantine",
-                    offersWarmMeals: true
-                ),
-                new Canteen(
-                    id: Guid.NewGuid(),
-                    city: City.Tilburg,
-                    canteenLocation: "Tilburg Campus Kantine",
-                    offersWarmMeals: false
-                ),
-                new Canteen(
-                    id: Guid.NewGuid(),
-                    city: City.DenBosch,
-                    canteenLocation: "Den Bosch Campus Kantine",
-                    offersWarmMeals: true
-                )
-            );
-        }
 
     }
 }

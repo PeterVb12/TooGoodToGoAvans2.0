@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6S0cNOydy3NIDYJDbn905hBF34YWBUz/HjWccfVsYzI=",
+  "Hash": "XKGzaHbQpRsrwBeOlvlT2FaKxtx6vqqM5RaMJV360O0=",
   "Source": "TooGoodToGoAvans.UI",
   "BasePath": "_content/TooGoodToGoAvans.UI",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AvansToGo_logo.png"
+    },
+    {
+      "Identity": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\wwwroot\\avanstogobanner2.0.jpeg",
+      "SourceId": "TooGoodToGoAvans.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\wwwroot\\",
+      "BasePath": "_content/TooGoodToGoAvans.UI",
+      "RelativePath": "avanstogobanner2.0.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\avanstogobanner2.0.jpeg"
     },
     {
       "Identity": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.UI\\wwwroot\\css\\styles.css",

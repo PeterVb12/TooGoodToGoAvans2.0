@@ -17,6 +17,7 @@ namespace TooGoodToGoAvans.Domain.Models
         public string MealType { get; set; }
 
         public Canteen? CanteenServedAt { get; set; }
+        public City CityLocation { get; set; }
         public Student? ReservedBy { get; set; } 
         public ICollection<Product>? Products { get; set; }
 

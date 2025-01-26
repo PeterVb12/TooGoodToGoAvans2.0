@@ -93,7 +93,8 @@ namespace TooGoodToGoAvans.UI.Controllers
                         studentId: registerVM.StudentId,
                         emailAddress: registerVM.EmailAddress,
                         studentCity: registerVM.City,
-                        phonenumber: registerVM.Phonenumber
+                        phonenumber: registerVM.Phonenumber,
+                        userId: "123"
                     );
                     await studentRepository.AddAsync(student);
                 }
@@ -140,7 +141,7 @@ namespace TooGoodToGoAvans.UI.Controllers
                     var result = await signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
                     if (result.Succeeded)
                     {
-                        return View("Index");
+                        return RedirectToAction("Index", "Home");
                     }
                 }
             }
@@ -166,6 +167,14 @@ namespace TooGoodToGoAvans.UI.Controllers
             }
 
             return RedirectToAction("Login", "Account");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
