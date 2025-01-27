@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TooGoodToGoAvans.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f8f6e86ba9dd83b9b7537d8c67d6a1cfbc82174")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55df7ba95c55694a461fe7e3dc99f1603fda0f7c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TooGoodToGoAvans.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TooGoodToGoAvans.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

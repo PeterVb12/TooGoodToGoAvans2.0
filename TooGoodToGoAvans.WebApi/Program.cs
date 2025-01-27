@@ -16,7 +16,7 @@ string? connectionString;
 
 if (builder.Environment.IsDevelopment())
 {
-    connectionString = builder.Configuration.GetConnectionString("LocalConnection");
+    connectionString = builder.Configuration.GetConnectionString("AzureConnection");
 }
 else
 {
@@ -31,6 +31,16 @@ builder.Services
     .AddGraphQLServer()
     .AddQueryType<PackageQuery>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Middleware volgorde
@@ -43,7 +53,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
-
+app.UseCors("AllowAll");
 app.MapControllers();
 app.MapGraphQL("/graphql");
 

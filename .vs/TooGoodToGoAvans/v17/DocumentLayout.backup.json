@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}|TooGoodToGoAvans.WebApi\\TooGoodToGoAvans.WebApi.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}|TooGoodToGoAvans.WebApi\\TooGoodToGoAvans.WebApi.csproj|solutionrelative:toogoodtogoavans.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}|TooGoodToGoAvans.WebApi\\TooGoodToGoAvans.WebApi.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans.webapi\\graphql\\packagequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}|TooGoodToGoAvans.WebApi\\TooGoodToGoAvans.WebApi.csproj|solutionrelative:toogoodtogoavans.webapi\\graphql\\packagequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}|TooGoodToGoAvans.WebApi\\TooGoodToGoAvans.WebApi.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}|TooGoodToGoAvans.WebApi\\TooGoodToGoAvans.WebApi.csproj|solutionrelative:toogoodtogoavans.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30BF8D5D-12D8-4143-A1DF-C8F924B2ED17}|TooGoodToGoAvans.WebApi\\TooGoodToGoAvans.WebApi.csproj|c:\\avans\\avans_jaar2\\periode_1\\sswp_project_toogoodtogo\\toogoodtogoavans\\toogoodtogoavans.webapi\\controllers\\packagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -174,7 +174,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 236,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -237,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.WebApi\\Program.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.WebApi\\Program.cs",
@@ -250,13 +250,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PackageQuery.cs",
               "DocumentMoniker": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.WebApi\\GraphQl\\PackageQuery.cs",
               "RelativeDocumentMoniker": "TooGoodToGoAvans.WebApi\\GraphQl\\PackageQuery.cs",
               "ToolTip": "C:\\AVANS\\AVANS_jaar2\\Periode_1\\SSWP_Project_TooGoodToGo\\TooGoodToGoAvans\\TooGoodToGoAvans.WebApi\\GraphQl\\PackageQuery.cs",
               "RelativeToolTip": "TooGoodToGoAvans.WebApi\\GraphQl\\PackageQuery.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-27T12:49:06.652Z",
               "EditorCaption": ""
