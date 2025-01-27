@@ -6,12 +6,11 @@ using TooGoodToGoAvans.WebApi.GraphQl;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPackageRepository, PackageRepository>();
+builder.Logging.AddConsole();
 
 string? connectionString;
 
@@ -34,19 +33,18 @@ builder.Services
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Middleware volgorde
+app.UseHttpsRedirection();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
 app.UseAuthorization();
-app.UseHttpsRedirection();
-app.MapControllers();
 
+app.MapControllers();
 app.MapGraphQL("/graphql");
 
 app.Run();
