@@ -5,6 +5,7 @@ using TooGoodToGoAvans.Infrastructure;
 using TooGoodToGoAvans.UI.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace TooGoodToGoAvans.UI.Controllers
 {
@@ -13,12 +14,15 @@ namespace TooGoodToGoAvans.UI.Controllers
         private readonly IPackageService _packageService;
         private readonly IPackageRepository _packageRepository;
         private readonly IProductRepository _productRepository;
-        public PackageController(IPackageService packageService, IPackageRepository packageRepository, IProductRepository productRepository)
+        private readonly IStaffMemberRepository _staffMemberRepository;
+        private readonly ILogger<PackageController> _logger;
+        public PackageController(IPackageService packageService, IPackageRepository packageRepository, IProductRepository productRepository, IStaffMemberRepository staffMemberRepository, ILogger<PackageController> logger)
         {
             _packageService = packageService;
             _packageRepository = packageRepository;
             _productRepository = productRepository;
-
+            _staffMemberRepository = staffMemberRepository;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -47,6 +51,23 @@ namespace TooGoodToGoAvans.UI.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Verkrijg de ingelogde staffmember
+                var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                Console.WriteLine($"UserId from claims: {userId}");
+                _logger.LogInformation("UserId ontvangen in repository: {UserId}", userId);
+                if (string.IsNullOrEmpty(userId))
+                {
+                    _logger.LogWarning("UserId could not be found in User.Claims.");
+                    return View("Error"); // Voeg eventueel een foutmelding toe
+                }
+                var staffMember = await _staffMemberRepository.GetStaffMemberByIdAsync(userId);
+                if (staffMember == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Geen geldige staffmember gevonden.");
+                    return View("/Views/Package/PackageCreate.cshtml", model);
+                }
+
+                // Maak een nieuw pakket aan
                 var package = new Package
                 {
                     Name = model.Name,
@@ -55,12 +76,13 @@ namespace TooGoodToGoAvans.UI.Controllers
                     AgeRestricted = model.AgeRestricted,
                     Price = model.Price,
                     MealType = model.MealType,
-                    CanteenServedAt = model.CanteenServedAt,
+                    CityLocation = staffMember.StaffmemberCity, // Koppel de stad
+                    CanteenServedAt = staffMember.WorkLocation, // Koppel de kantine
                     ReservedBy = null, // Het pakket is nog niet gereserveerd
                     Products = new List<Product>()
                 };
 
-                // Verkrijg de geselecteerde producten en voeg ze toe aan het pakket
+                // Voeg geselecteerde producten toe aan het pakket
                 var selectedProductIds = model.Products
                     .Where(p => p.Selected)
                     .Select(p => p.Id)
@@ -75,6 +97,7 @@ namespace TooGoodToGoAvans.UI.Controllers
                     }
                 }
 
+                // Sla het pakket op in de database
                 await _packageRepository.AddPackageAsync(package);
                 return RedirectToAction("Index");
             }
@@ -117,7 +140,7 @@ namespace TooGoodToGoAvans.UI.Controllers
                 {
                     return Unauthorized();
                 }
-                Console.WriteLine($"UserId: {userId}, PackageId: {packageId}");
+                _logger.LogInformation("ReservePackage: UserId opgehaald: {UserId}", userId);
                 await _packageRepository.ReservePackageAsync(packageId, userId);
 
                 return RedirectToAction("PackageReserving", "Home", new { id = packageId });

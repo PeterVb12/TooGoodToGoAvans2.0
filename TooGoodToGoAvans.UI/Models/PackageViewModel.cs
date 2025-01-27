@@ -32,7 +32,6 @@ namespace TooGoodToGoAvans.UI.Models
         [Display(Name = "Meal Type")]
         public string MealType { get; set; }
 
-        [Required(ErrorMessage = "Canteen is required")]
         public Canteen? CanteenServedAt { get; set; }
 
         public List<SelectableProductViewModel> Products { get; set; } = new List<SelectableProductViewModel>();

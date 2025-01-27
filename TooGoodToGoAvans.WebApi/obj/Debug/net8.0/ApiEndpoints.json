@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "TooGoodToGoAvans.WebApi.Controllers.PackagesController",
+    "Method": "GetPackagesAsync",
+    "RelativePath": "api/Packages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TooGoodToGoAvans.WebApi.Controllers.PackagesController",
+    "Method": "ReservePackageAsync",
+    "RelativePath": "api/Packages/reserve",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TooGoodToGoAvans.WebApi.Controllers.ReservePackageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

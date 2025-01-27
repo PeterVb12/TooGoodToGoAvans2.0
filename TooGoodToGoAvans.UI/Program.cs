@@ -16,6 +16,7 @@ builder.Services.AddScoped<ICanteenRepository, CanteenRepository>();
 builder.Services.AddScoped<IPackageRepository, PackageRepository>();
 builder.Services.AddScoped<IPackageService, PackageService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Logging.AddConsole();
 
 string? connectionString;
 string? authConnectionString;

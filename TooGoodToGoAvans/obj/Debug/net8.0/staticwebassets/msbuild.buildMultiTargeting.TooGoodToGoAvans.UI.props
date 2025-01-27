@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TooGoodToGoAvans.UI.props" />
+</Project>

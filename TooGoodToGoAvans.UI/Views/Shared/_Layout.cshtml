@@ -15,9 +15,23 @@
 </head>
 <style>
     :root {
-        --main-color: #3C8C3F;
+        --main-color: #60ab1b;
         --accent-color: #D13046;
-        --background-color: #FFFFFF;
+        --footer-color: #bdc2c7;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Zorgt ervoor dat de body ten minste de hoogte van het scherm heeft */
+    }
+
+    .navbar {
+        background-color: var(--main-color); /* updated navbar background color */
+    }
+
+    .navbar-nav .nav-link {
+        font-weight: bold; /* making the text thicker */
     }
 
     .btn-primary {
@@ -26,32 +40,30 @@
         color: white;
     }
 
-    .header {
-        background-color: var(--main-color);
-        position: relative;
-        overflow: hidden;
+    .btn-link {
+        padding: 0;
+        text-decoration: none;
     }
 
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+    .btn-danger {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
 
-            z-index: 1;
-        }
+    .footer {
+        background-color: var(--footer-color); /* updated footer color */
+        margin-top: auto; /* Zorgt ervoor dat de footer altijd onderaan komt */
+        width: 100%;
+    }
 
-        .header .content {
-            position: relative;
-            z-index: 2;
-        }
-
+    .content-wrapper {
+        margin-bottom: 80px; /* space between content and footer */
+        flex: 1; /* Zorgt ervoor dat de content de beschikbare ruimte opvult */
+    }
 </style>
 <body>
     <!-- Responsive navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container px-5">
             <a class="navbar-brand" href="#!">
                 <img src="~/AvansToGo_logo.png" alt="Avans To Go Logo" style="height: 70px; width: auto;">
@@ -79,14 +91,16 @@
                     {
                         <li class="nav-item">
                             <form asp-controller="Account" asp-action="Logout" method="post" style="display:inline;">
-                                <button type="submit" class="btn btn-link nav-link text-danger" style="padding: 0;">Logout</button>
+                                <button type="submit" class="btn btn-danger">Logout</button>
                             </form>
                         </li>
                     }
                     else
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-success" asp-controller="Account" asp-action="Login">Login</a>
+                            <a class="nav-link text-success" asp-controller="Account" asp-action="Login">
+                                <button class="btn btn-primary">Login</button>
+                            </a>
                         </li>
                     }
                 </ul>
@@ -95,12 +109,12 @@
     </nav>
 
     <!-- Page content -->
-    <main role="main" class="">
+    <main role="main" class="content-wrapper">
         @RenderBody()
     </main>
 
     <!-- Footer-->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 footer">
         <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; TooGoodToGo 2023</p></div>
     </footer>
 
