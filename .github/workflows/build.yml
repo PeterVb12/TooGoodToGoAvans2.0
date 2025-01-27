@@ -44,35 +44,29 @@ jobs:
       run: dotnet publish ./TooGoodToGoAvans.UI --output ./publish/webapp --configuration Release
 
     # Bundle EF migrations (Main Application)
-    - name: Bundle EF project (Main App)
-      env:
-        AZURE_DB_CONNECTION: ${{ secrets.AZURE_DB_CONNECTION }}
-      run:  |
+    - name: Bundle EF migrations for Main App
+      run: |
         dotnet tool install --global dotnet-ef
         dotnet tool restore
         dotnet ef migrations bundle \
           --output ./publish/migrations/main_migrations.exe \
-          --startup-project ./TooGoodToGoAvans.WebApi \
+          --startup-project ./TooGoodToGoAvans.UI \
           --project ./TooGoodToGoAvans.Infrastructure \
           --self-contained -r linux-x64 \
           --context TooGoodToGoAvansDBContext \
-          --connection "$AZURE_DB_CONNECTION"
+          --verbose
     
     # Bundle EF migrations (Identity Framework)
-    - name: Bundle EF project (Identity Framework)
-      env:
-        AZURE_AUTH_DB_CONNECTION: ${{ secrets.AZURE_AUTH_DB_CONNECTION }}
-      run:  |
-        dotnet tool restore
+    - name: Bundle EF migrations for Identity Framework
+      run: |
         dotnet ef migrations bundle \
           --output ./publish/migrations/identity_migrations.exe \
-          --startup-project ./TooGoodToGoAvans.WebApi \
+          --startup-project ./TooGoodToGoAvans.UI \
           --project ./TooGoodToGoAvans.Infrastructure \
           --self-contained -r linux-x64 \
           --context TooGoodToGoAvansDBContext_IF \
-          --connection "$AZURE_AUTH_DB_CONNECTION"
+          --verbose
     
-
     # Upload artifacts
     - name: Upload artifact API
       uses: actions/upload-artifact@v4
@@ -90,10 +84,10 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
           name: deploy-migrations-main
-          path: ./publish/migrations/main_migrations
+          path: ./publish/migrations/main_migrations.exe
 
     - name: Upload artifact Migrations (Identity)
       uses: actions/upload-artifact@v4
       with:
           name: deploy-migrations-identity
-          path: ./publish/migrations/identity_migrations
+          path: ./publish/migrations/identity_migrations.exe
