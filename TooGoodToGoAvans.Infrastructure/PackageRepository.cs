@@ -73,5 +73,41 @@ namespace TooGoodToGoAvans.Infrastructure
                 .ToListAsync();
         }
 
+
+        public async Task<Package> GetByIdAsync(Guid packageId)
+        {
+            return await _context.Packages
+                .FirstOrDefaultAsync(p => p.PackageId == packageId);
+        }
+
+        public async Task<IEnumerable<Package>> GetByLocationAsync(string location)
+        {
+            return await _context.Packages
+                .Where(p => p.CityLocation.ToString().Equals(location, StringComparison.OrdinalIgnoreCase))
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Package>> GetByMealTypeAsync(string mealType)
+        {
+            return await _context.Packages
+                .Where(p => p.MealType.Equals(mealType, StringComparison.OrdinalIgnoreCase))
+                .ToListAsync();
+        }
+
+        public async Task<bool> CheckReservationLimit(string studentId, DateTime pickupDate)
+        {
+            var reservedPackage = await _context.Packages
+                .Where(p => p.ReservedBy.UserId == studentId && p.DateAndTimePickup.Date == pickupDate.Date)
+                .FirstOrDefaultAsync();
+
+            return reservedPackage != null;
+        }
+
+        public async Task RemoveAsync(Package package)
+        {
+            _context.Packages.Remove(package);
+            await _context.SaveChangesAsync();
+        }
+
     }
 }
