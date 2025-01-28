@@ -18,6 +18,7 @@ namespace TooGoodToGoAvans.Infrastructure
             _context = context;
         }
 
+
         // Voeg een nieuw product toe
         public async Task AddProductAsync(Product product)
         {

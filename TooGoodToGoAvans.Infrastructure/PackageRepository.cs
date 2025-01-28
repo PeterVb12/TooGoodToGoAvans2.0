@@ -61,9 +61,26 @@ namespace TooGoodToGoAvans.Infrastructure
             await _context.SaveChangesAsync();
         }
 
-        public Task UpdatePackageAsync(Package package)
+        public async Task UpdatePackageAsync(Package package)
         {
-            throw new NotImplementedException();
+            var existingPackage = await _context.Packages
+                .Include(p => p.Products)  // Zorg ervoor dat de producten geladen zijn
+                .FirstOrDefaultAsync(p => p.PackageId == package.PackageId);
+
+            if (existingPackage != null)
+            {
+                existingPackage.Name = package.Name;
+                existingPackage.DateAndTimePickup = package.DateAndTimePickup;
+                existingPackage.DateAndTimeLastPickup = package.DateAndTimeLastPickup;
+                existingPackage.Price = package.Price;
+                existingPackage.MealType = package.MealType;
+                existingPackage.AgeRestricted = package.AgeRestricted;
+
+                // Bijwerken van de producten als dat nodig is
+                existingPackage.Products = package.Products;
+
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task<IEnumerable<Package>> GetReservedPackagesByUserAsync(string userId)
@@ -77,13 +94,14 @@ namespace TooGoodToGoAvans.Infrastructure
         public async Task<Package> GetByIdAsync(Guid packageId)
         {
             return await _context.Packages
+                .Include(p => p.ReservedBy) 
                 .FirstOrDefaultAsync(p => p.PackageId == packageId);
         }
 
-        public async Task<IEnumerable<Package>> GetByLocationAsync(string location)
+        public async Task<IEnumerable<Package>> GetByLocationAsync(City location)
         {
             return await _context.Packages
-                .Where(p => p.CityLocation.ToString().Equals(location, StringComparison.OrdinalIgnoreCase))
+                .Where(p => p.CityLocation == location)
                 .ToListAsync();
         }
 

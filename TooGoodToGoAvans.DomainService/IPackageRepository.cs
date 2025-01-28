@@ -17,7 +17,7 @@ namespace TooGoodToGoAvans.DomainService
         public Task ReservePackageAsync(Guid packageId, string userId);
         public Task<IEnumerable<Package>> GetReservedPackagesByUserAsync(string userId);
         Task<Package> GetByIdAsync(Guid packageId);
-        Task<IEnumerable<Package>> GetByLocationAsync(string location);
+        Task<IEnumerable<Package>> GetByLocationAsync(City location);
         Task<IEnumerable<Package>> GetByMealTypeAsync(string mealType);
         Task<bool> CheckReservationLimit(string studentId, DateTime pickupDate);
         Task RemoveAsync(Package package);

@@ -93,8 +93,9 @@ namespace TooGoodToGoAvans.UI.Test
         {
             // Arrange
             var location = "Breda";
+            var locationEnum = City.Breda;
             var packages = new List<Package> { CreateTestPackage(), CreateTestPackage() };
-            _packageRepository.GetByLocationAsync(location).Returns(packages);
+            _packageRepository.GetByLocationAsync(locationEnum).Returns(packages);
 
             // Act
             var result = await _packageService.GetPackagesSpecificLocation(location);

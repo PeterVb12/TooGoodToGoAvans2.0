@@ -87,6 +87,9 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="ReservedPackages">Reserveringen</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="StaffPackageOverview">Aanbod</a>
+                    </li>
                     @if (User.Identity != null && User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item">

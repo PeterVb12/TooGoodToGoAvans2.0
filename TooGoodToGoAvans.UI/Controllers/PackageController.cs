@@ -99,7 +99,7 @@ namespace TooGoodToGoAvans.UI.Controllers
 
                 // Sla het pakket op in de database
                 await _packageRepository.AddPackageAsync(package);
-                return RedirectToAction("Index");
+                return View("/Views/Home/Index.cshtml");
             }
 
             // Als de modelstate ongeldig is, herlaad de producten voor de view
@@ -152,6 +152,143 @@ namespace TooGoodToGoAvans.UI.Controllers
             }
         }
 
+        [HttpGet]
+        public async Task<IActionResult> EditPackage(Guid packageId)
+        {
+            var package = await _packageRepository.GetByIdAsync(packageId);
+            if (package == null)
+            {
+                return NotFound();
+            }
+
+            // Haal alle producten op
+            var allProducts = await _productRepository.GetProductsAsync();
+
+            // Maak een lijst van SelectableProductViewModel
+            var productViewModels = allProducts.Select(product => new SelectableProductViewModel
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Selected = package.Products.Any(p => p.Id == product.Id) // Check of product al in package zit
+            }).ToList();
+
+            // Maak het viewmodel
+            var model = new PackageViewModel
+            {
+                PackageId = package.PackageId,
+                Name = package.Name,
+                DateAndTimePickup = package.DateAndTimePickup,
+                DateAndTimeLastPickup = package.DateAndTimeLastPickup,
+                AgeRestricted = package.AgeRestricted,
+                Price = package.Price,
+                MealType = package.MealType,
+                CanteenServedAt = package.CanteenServedAt,
+                Products = productViewModels
+            };
+
+            return View(model);
+        }
+
+        // Verwerk de bewerking
+        [HttpPost]
+        public async Task<IActionResult> EditPackage(PackageViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var package = await _packageRepository.GetByIdAsync(model.PackageId);
+                if (package == null)
+                {
+                    return NotFound();
+                }
+
+                // Werk de pakketgegevens bij
+                package.Name = model.Name;
+                package.DateAndTimePickup = model.DateAndTimePickup;
+                package.DateAndTimeLastPickup = model.DateAndTimeLastPickup;
+                package.AgeRestricted = model.AgeRestricted;
+                package.Price = model.Price;
+                package.MealType = model.MealType;
+                package.CanteenServedAt = model.CanteenServedAt;
+
+                // Verwijder niet-geselecteerde producten
+                var selectedProductIds = model.Products
+                    .Where(p => p.Selected)
+                    .Select(p => p.Id)
+                    .ToList();
+
+                var productsToRemove = package.Products
+                    .Where(p => !selectedProductIds.Contains(p.Id))
+                    .ToList();
+
+                foreach (var product in productsToRemove)
+                {
+                    package.Products.Remove(product);
+                }
+
+                // Voeg nieuwe geselecteerde producten toe
+                foreach (var productId in selectedProductIds)
+                {
+                    if (!package.Products.Any(p => p.Id == productId))
+                    {
+                        var product = await _productRepository.GetProductByIdAsync(productId);
+                        if (product != null)
+                        {
+                            package.Products.Add(product);
+                        }
+                    }
+                }
+
+                // Sla het pakket op
+                await _packageRepository.UpdatePackageAsync(package);
+
+                return RedirectToAction("Index"); // Of een andere pagina
+            }
+
+            // Als de modelstate ongeldig is, herlaad de producten voor de view
+            var allProducts = await _productRepository.GetProductsAsync();
+            model.Products = allProducts.Select(p => new SelectableProductViewModel
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Selected = model.Products.Any(sp => sp.Id == p.Id && sp.Selected)
+            }).ToList();
+
+            return View(model);
+        }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> DeletePackage(Guid id)
+        {
+            var package = await _packageRepository.GetByIdAsync(id);
+            if (package == null)
+            {
+                TempData["ErrorMessage"] = "Package not found.";
+                return View("/Views/Home/Index.cshtml");
+            }
+
+            // Controleer of het pakket gereserveerd is
+            bool isReserved = await _packageService.CheckIfPackageIsReserved(id);
+            if (isReserved)
+            {
+                TempData["ErrorMessage"] = "The package cannot be deleted as it is already reserved.";
+                return View("/Views/Home/Index.cshtml");
+            }
+
+            try
+            {
+                // Verwijder het pakket
+                await _packageRepository.RemoveAsync(package);
+                TempData["SuccessMessage"] = "Package deleted successfully.";
+                return View("/Views/Home/Index.cshtml");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"An error occurred: {ex.Message}";
+                return View("/Views/Home/Index.cshtml");
+            }
+        }
 
     }
 }

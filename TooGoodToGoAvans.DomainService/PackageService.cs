@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +12,13 @@ namespace TooGoodToGoAvans.DomainService
     {
         private readonly IPackageRepository _packageRepository;
         private readonly IStudentRepository _studentRepository;
+        private readonly ILogger<PackageService> _logger;
 
-        public PackageService(IPackageRepository packageRepository, IStudentRepository studentRepository)
+        public PackageService(IPackageRepository packageRepository, IStudentRepository studentRepository, ILogger<PackageService> logger)
         {
             _packageRepository = packageRepository;
             _studentRepository = studentRepository;
+            _logger = logger;
         }
 
         // Methode om te controleren of een pakket al gereserveerd is.
@@ -26,14 +29,19 @@ namespace TooGoodToGoAvans.DomainService
             {
                 throw new Exception($"Package with ID {packageId} not found.");
             }
-
+            _logger.LogInformation($"Package ID: {package.PackageId}, ReservedBy: {package.ReservedBy?.Name}");
             return package.ReservedBy != null;
         }
 
         // Methode om alle pakketten op basis van een specifieke locatie op te halen.
         public async Task<IEnumerable<Package>> GetPackagesSpecificLocation(string location)
         {
-            return await _packageRepository.GetByLocationAsync(location);
+            if (Enum.TryParse<City>(location, true, out var city))
+            {
+                return await _packageRepository.GetByLocationAsync(city);
+            }
+            throw new ArgumentException($"Invalid location: {location}. Must be a valid City value.", nameof(location));
+
         }
 
         // Methode om pakketten op basis van een specifiek maaltijdtype op te halen.
